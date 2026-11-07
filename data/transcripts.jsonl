@@ -1,0 +1,384 @@
+{"asr": "scribe_v1", "channel": "clean", "clip": "amount-1.natural", "transcript": "L'importo che ho pagato è 318 euro e 7 centesimi", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "amount-1.natural", "transcript": "L'importo che ho pagato è 318 euro e sette centesimi", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "amount-1.natural", "transcript": "L'importo che ho pagato è 318 euro e 7 centesimi", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "amount-1.natural", "transcript": "L'importo che ho pagato è trecentodiciotto euro e sette centesimi", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "amount-1.natural", "transcript": "L'importo che ho pagato è trecentodiciotto euro e sette centesimi", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "amount-1.natural", "transcript": "L'importo che ho pagato è trecentodiciotto euro e sette centesimi", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "amount-1.spelled", "transcript": "L'importo che ho pagato è tre, uno, otto virgola zero sette euro", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "amount-1.spelled", "transcript": "L'importo che ho pagato è tre, uno, otto virgola zero sette euro", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "amount-1.spelled", "transcript": "L'importo che ho pagato è 318,07 euro", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "amount-1.spelled", "transcript": "L'importo che ho pagato è 318,07 euro", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "amount-1.spelled", "transcript": "L'importo che ho pagato è 318,07 euro", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "amount-1.spelled", "transcript": "L'importo che ho pagato è tre uno otto virgola zero sette euro", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "amount-2.natural", "transcript": "L'importo che ho pagato è €168,53", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "amount-2.natural", "transcript": "L'importo che ho pagato è 168 euro e 53 centesimi", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "amount-2.natural", "transcript": "L'importo che ho pagato è €168,53", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "amount-2.natural", "transcript": "L'importo che ho pagato è centosessantotto euro e cinquantatré centesimi.", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "amount-2.natural", "transcript": "L'importo che ho pagato è €168,53", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "amount-2.natural", "transcript": "L'importo che ho pagato è €168,53", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "amount-2.spelled", "transcript": "L'importo che ho pagato è 168,53 euro", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "amount-2.spelled", "transcript": "L'importo che ho pagato è 168,53 euro", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "amount-2.spelled", "transcript": "L'importo che ho pagato è uno sei otto virgola cinque tre euro", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "amount-2.spelled", "transcript": "L'importo che ho pagato è uno sei otto virgola cinque tre euro", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "amount-2.spelled", "transcript": "L'importo che ho pagato è 168,53 euro", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "amount-2.spelled", "transcript": "L'importo che ho pagato è uno sei otto virgola cinque tre euro", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "amount-3.natural", "transcript": "L'importo che ho pagato è centottanta euro e cinquantanove centesimi", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "amount-3.natural", "transcript": "L'importo che ho pagato è €180,59", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "amount-3.natural", "transcript": "L'importo che ho pagato è centottanta euro e cinquantanove centesimi", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "amount-3.natural", "transcript": "L'importo che ho pagato è centottanta euro e cinquantanove centesimi", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "amount-3.natural", "transcript": "L'importo che ho pagato è centottanta euro e cinquantanove centesimi", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "amount-3.natural", "transcript": "L'importo che ho pagato è centottanta euro e cinquantanove centesimi", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "amount-3.spelled", "transcript": "L'importo che ho pagato è 180,59 euro", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "amount-3.spelled", "transcript": "L'importo che ho pagato è uno otto zero virgola cinquanta nove euro", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "amount-3.spelled", "transcript": "L'importo che ho pagato è uno otto zero virgola cinque nove euro", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "amount-3.spelled", "transcript": "L'importo che ho pagato è 180,59 euro", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "amount-3.spelled", "transcript": "L'importo che ho pagato è 180,59€.", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "amount-3.spelled", "transcript": "L'importo che ho pagato è uno otto zero virgola cinque nove euro", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "amount-4.natural", "transcript": "L'importo che ho pagato è €97,62", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "amount-4.natural", "transcript": "L'importo che ho pagato è €97,62", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "amount-4.natural", "transcript": "L'importo che ho pagato è novantasette euro e sessantadue centesimi", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "amount-4.natural", "transcript": "L'importo che ho pagato è €97,62", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "amount-4.natural", "transcript": "L'importo che ho pagato è €97,62", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "amount-4.natural", "transcript": "L'importo che ho pagato è €97,62", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "amount-4.spelled", "transcript": "L'importo che ho pagato è 97,62 euro", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "amount-4.spelled", "transcript": "L'importo che ho pagato è 97,62 euro", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "amount-4.spelled", "transcript": "L'importo che ho pagato è 97,62 euro", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "amount-4.spelled", "transcript": "L'importo che ho pagato è 97,62 euro", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "amount-4.spelled", "transcript": "L'importo che ho pagato è 97,62 euro", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "amount-4.spelled", "transcript": "L'importo che ho pagato è nove sette virgola sei due euro", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "birth_date-1.natural", "transcript": "La data di nascita del titolare è il 4 settembre 1992", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "birth_date-1.natural", "transcript": "La data di nascita del titolare è il 4 settembre 1992", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "birth_date-1.natural", "transcript": "La data di nascita del titolare è il 4 settembre 1992", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "birth_date-1.natural", "transcript": "La data di nascita del titolare è il 4 settembre 1992", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "birth_date-1.natural", "transcript": "La data di nascita del titolare è il 4 settembre 1992", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "birth_date-1.natural", "transcript": "La data di nascita del titolare è il 4 settembre 1992", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "birth_date-1.spelled", "transcript": "La data di nascita del titolare è il 4/9/1992", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "birth_date-1.spelled", "transcript": "La data di nascita del titolare è il 4/9/1992", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "birth_date-1.spelled", "transcript": "La data di nascita del titolare è il 04/09/1992", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "birth_date-1.spelled", "transcript": "La data di nascita del titolare è il 4/9/1992", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "birth_date-1.spelled", "transcript": "La data di nascita del titolare è il 04/09/1992.", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "birth_date-1.spelled", "transcript": "La data di nascita del titolare è il 04/09/1992", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "birth_date-2.natural", "transcript": "La data di nascita del titolare è il 28 settembre 1942", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "birth_date-2.natural", "transcript": "La data di nascita del titolare è il 28 settembre 1942", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "birth_date-2.natural", "transcript": "La data di nascita del titolare è il 28 settembre 1942", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "birth_date-2.natural", "transcript": "La data di nascita del titolare è il 28 settembre 1942", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "birth_date-2.natural", "transcript": "La data di nascita del titolare è il 28 settembre 1942", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "birth_date-2.natural", "transcript": "La data di nascita del titolare è il 28 settembre 1942", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "birth_date-2.spelled", "transcript": "La data di nascita del titolare è il 28/9/1942", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "birth_date-2.spelled", "transcript": "La data di nascita del titolare è il 28/9/1942", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "birth_date-2.spelled", "transcript": "La data di nascita del titolare è il 28/9/1942", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "birth_date-2.spelled", "transcript": "La data di nascita del titolare è il 28/9/1942.", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "birth_date-2.spelled", "transcript": "La data di nascita del titolare è il 28/9/1942", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "birth_date-2.spelled", "transcript": "La data di nascita del titolare è il 28/9/1942", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "birth_date-3.natural", "transcript": "La data di nascita del titolare è il 18 novembre 1971", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "birth_date-3.natural", "transcript": "La data di nascita del titolare è il 18 novembre 1971", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "birth_date-3.natural", "transcript": "La data di nascita del titolare è il 18 novembre 1971", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "birth_date-3.natural", "transcript": "La data di nascita del titolare è il 18 novembre 1971", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "birth_date-3.natural", "transcript": "La data di nascita del titolare è il 18 novembre 1971", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "birth_date-3.natural", "transcript": "La data di nascita del titolare è il 18 novembre 1971", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "birth_date-3.spelled", "transcript": "La data di nascita del titolare è il 18/11/1971", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "birth_date-3.spelled", "transcript": "La data di nascita del titolare è il 18/11/1971", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "birth_date-3.spelled", "transcript": "La data di nascita del titolare è il 18/11/1971", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "birth_date-3.spelled", "transcript": "La data di nascita del titolare è il 18/11/1971", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "birth_date-3.spelled", "transcript": "La data di nascita del titolare è il 18/11/1971", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "birth_date-3.spelled", "transcript": "La data di nascita del titolare è il 18/11/1971", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "birth_date-4.natural", "transcript": "La data di nascita del titolare è il 6 luglio 1972", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "birth_date-4.natural", "transcript": "La data di nascita del titolare è il 6 luglio 1972", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "birth_date-4.natural", "transcript": "La data di nascita del titolare è il 6 luglio 1972", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "birth_date-4.natural", "transcript": "La data di nascita del titolare è il 6 luglio 1972", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "birth_date-4.natural", "transcript": "La data di nascita del titolare è il 6 luglio 1972.", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "birth_date-4.natural", "transcript": "La data di nascita del titolare è il 6 luglio 1972", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "birth_date-4.spelled", "transcript": "La data di nascita del titolare è il 06/07/1972", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "birth_date-4.spelled", "transcript": "La data di nascita del titolare è il 06/07/1972", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "birth_date-4.spelled", "transcript": "La data di nascita del titolare è il 06/07/1972", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "birth_date-4.spelled", "transcript": "La data di nascita del titolare è il 06/07/1972", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "birth_date-4.spelled", "transcript": "La data di nascita del titolare è il 06/07/1972", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "birth_date-4.spelled", "transcript": "La data di nascita del titolare è il 06/07/1972", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "customer_code-1.natural", "transcript": "Il mio codice cliente è C6305", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "customer_code-1.natural", "transcript": "Il mio codice cliente è C6305", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "customer_code-1.natural", "transcript": "Il mio codice cliente è C6305", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "customer_code-1.natural", "transcript": "Il mio codice cliente è C6305.", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "customer_code-1.natural", "transcript": "Il mio codice cliente è C6305", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "customer_code-1.natural", "transcript": "Il mio codice cliente è C6305", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "customer_code-1.spelled", "transcript": "Il mio codice cliente è C come Como sei tre zero cinque", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "customer_code-1.spelled", "transcript": "Il mio codice cliente è C come Como sei tre zero cinque", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "customer_code-1.spelled", "transcript": "Il mio codice cliente è C come Como sei tre zero cinque", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "customer_code-1.spelled", "transcript": "Il mio codice cliente è C come Como sei tre zero cinque", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "customer_code-1.spelled", "transcript": "Il mio codice cliente è C come Como sei tre zero cinque", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "customer_code-1.spelled", "transcript": "Il mio codice cliente è C come Como sei tre zero cinque", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "customer_code-2.natural", "transcript": "Il mio codice cliente è C4657", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "customer_code-2.natural", "transcript": "Il mio codice cliente è C4657", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "customer_code-2.natural", "transcript": "Il mio codice cliente è C4657", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "customer_code-2.natural", "transcript": "Il mio codice cliente è C4657", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "customer_code-2.natural", "transcript": "Il mio codice cliente è C4657", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "customer_code-2.natural", "transcript": "Il mio codice cliente è C4657", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "customer_code-2.spelled", "transcript": "Il mio codice cliente è C come Como quattro sei cinque sette", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "customer_code-2.spelled", "transcript": "Il mio codice cliente è C come Como quattro sei cinque sette", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "customer_code-2.spelled", "transcript": "Il mio codice cliente è C come Como quattro sei cinque sette", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "customer_code-2.spelled", "transcript": "Il mio codice cliente è C come Como quattro sei cinque sette", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "customer_code-2.spelled", "transcript": "Il mio codice cliente è C come Como quattro sei cinque sette", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "customer_code-2.spelled", "transcript": "Il mio codice cliente è C come Como quattro sei cinque sette", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "customer_code-3.natural", "transcript": "Il mio codice cliente è C7101", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "customer_code-3.natural", "transcript": "Il mio codice cliente è C7101", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "customer_code-3.natural", "transcript": "Il mio codice cliente è C7101", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "customer_code-3.natural", "transcript": "Il mio codice cliente è C7101", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "customer_code-3.natural", "transcript": "Il mio codice cliente è C7101", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "customer_code-3.natural", "transcript": "Il mio codice cliente è C7101", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "customer_code-3.spelled", "transcript": "Il mio codice cliente è C come Como sette uno zero uno", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "customer_code-3.spelled", "transcript": "Il mio codice cliente è C come Como sette uno zero uno", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "customer_code-3.spelled", "transcript": "Il mio codice cliente è C come Como sette uno zero uno", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "customer_code-3.spelled", "transcript": "Il mio codice cliente è C come Como sette uno zero uno", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "customer_code-3.spelled", "transcript": "Il mio codice cliente è C come Como sette uno zero uno", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "customer_code-3.spelled", "transcript": "Il mio codice cliente è C come Como sette uno zero uno", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "customer_code-4.natural", "transcript": "Il mio codice cliente è C6627", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "customer_code-4.natural", "transcript": "Il mio codice cliente è C6627", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "customer_code-4.natural", "transcript": "Il mio codice cliente è C6627", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "customer_code-4.natural", "transcript": "Il mio codice cliente è C6627.", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "customer_code-4.natural", "transcript": "Il mio codice cliente è C6627", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "customer_code-4.natural", "transcript": "Il mio codice cliente è C6627", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "customer_code-4.spelled", "transcript": "Il mio codice cliente è C come Como sei sei due sette", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "customer_code-4.spelled", "transcript": "Il mio codice cliente è C come Como sei sei due sette", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "customer_code-4.spelled", "transcript": "Il mio codice cliente è C come Como sei sei due sette", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "customer_code-4.spelled", "transcript": "Il mio codice cliente è C come Como, 6627", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "customer_code-4.spelled", "transcript": "Il mio codice cliente è C come Como, sei sei due sette", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "customer_code-4.spelled", "transcript": "Il mio codice cliente è C come Como, sei sei due sette", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "delegation_ref-1.natural", "transcript": "Il codice di delega è di LGK3DE", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "delegation_ref-1.natural", "transcript": "Il codice di delega è di LGK3DE", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "delegation_ref-1.natural", "transcript": "Il codice di delega è di LGK3DE", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "delegation_ref-1.natural", "transcript": "Il codice di delega è DLGK3DE", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "delegation_ref-1.natural", "transcript": "Il codice di delega è DLGK3DE", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "delegation_ref-1.natural", "transcript": "Il codice di delega è DLGK3DE", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "delegation_ref-1.spelled", "transcript": "Il codice di delega è D come Domodossola, L come Livorno, G come Genova, K come Kappa, 3D come Domodossola, E come Empoli", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "delegation_ref-1.spelled", "transcript": "Il codice di delega è D come Domodossola, L come Livorno, G come Genova, K come Kappa, 3D come Domodossola, E come Empoli", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "delegation_ref-1.spelled", "transcript": "Il codice di delega è D come Domodossola, L come Livorno, G come Genova, K come Kappa, 3D come Domodossola, E come Empoli", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "delegation_ref-1.spelled", "transcript": "Il codice di delega è D come Domodossola, L come Livorno, G come Genova, K come Kappa, 3D come Domodossola, E come Empoli", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "delegation_ref-1.spelled", "transcript": "Il codice di delega è D come Domodossola, L come Livorno, G come Genova, K come Cappa, 3D come Domodossola, E come Empoli", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "delegation_ref-1.spelled", "transcript": "Il codice di delega è D come Domodossola, L come Livorno, G come Genova, K come Cappa, 3D come Domodossola, E come Empoli", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "delegation_ref-2.natural", "transcript": "Il codice di delega è DLGD3DQ", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "delegation_ref-2.natural", "transcript": "Il codice di delega è DLGD3DQ", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "delegation_ref-2.natural", "transcript": "Il codice di delega è DLGD3DQ", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "delegation_ref-2.natural", "transcript": "Il codice di delega è DLGD3DQ", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "delegation_ref-2.natural", "transcript": "Il codice di delega è DLGD3DQ", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "delegation_ref-2.natural", "transcript": "Il codice di delega è DLG di 3DQ", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "delegation_ref-2.spelled", "transcript": "Il codice di delega è D come Domodossola, L come Livorno, G come Genova, D come Domodossola, 3 D come Domodossola, Q come Quarto", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "delegation_ref-2.spelled", "transcript": "Il codice di delega è D come Domodossola, L come Livorno, G come Genova, D come Domodossola, 3 D come Domodossola, Q come Quarto", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "delegation_ref-2.spelled", "transcript": "Il codice di delega è D come Domodossola, L come Livorno, G come Genova, D come Domodossola, 3 D come Domodossola, Q come Quarto", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "delegation_ref-2.spelled", "transcript": "Il codice di delega è D come Domodossola, L come Livorno, G come Genova, D come Domodossola, tre D come Domodossola, Q come Quarto", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "delegation_ref-2.spelled", "transcript": "Il codice di delega è D come Domodossola, L come Livorno, G come Genova, D come Domodossola, 3 D come Domodossola, Q come Quarto", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "delegation_ref-2.spelled", "transcript": "Il codice di delega è D come Domodossola, L come Livorno, G come Genova, D come Domodossola, tre D come Domodossola, Q come Quarto", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "delegation_ref-3.natural", "transcript": "Il codice di delega è DLGGEDP", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "delegation_ref-3.natural", "transcript": "Il codice di delega è di LGEDP", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "delegation_ref-3.natural", "transcript": "Il codice di delega è di LGGEDP", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "delegation_ref-3.natural", "transcript": "Il codice di delega è di LGEDP", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "delegation_ref-3.natural", "transcript": "Il codice di delega è DLGGEDP", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "delegation_ref-3.natural", "transcript": "Il codice di delega è DLGGEDP", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "delegation_ref-3.spelled", "transcript": "Il codice di delega è D come Domodossola, L come Livorno, G come Genova, G come Genova, E come Empoli, D come Domodossola, P come Palermo", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "delegation_ref-3.spelled", "transcript": "Il codice di delega è D come Domodossola, L come Livorno, G come Genova, G come Genova, E come Empoli, D come Domodossola, P come Palermo", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "delegation_ref-3.spelled", "transcript": "Il codice di delega è D come Domodossola, L come Livorno, G come Genova, G come Genova, E come Empoli, D come Domodossola, P come Palermo", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "delegation_ref-3.spelled", "transcript": "Il codice di delega è D come Domodossola, L come Livorno, G come Genova, G come Genova, E come Empoli, D come Domodossola, P come Palermo", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "delegation_ref-3.spelled", "transcript": "Il codice di delega è D come Domodossola, L come Livorno, G come Genova, G come Genova, E come Empoli, D come Domodossola, P come Palermo", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "delegation_ref-3.spelled", "transcript": "Il codice di delega è D come Domodossola, L come Livorno, G come Genova, G come Genova, E come Empoli, D come Domodossola, P come Palermo", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "delegation_ref-4.natural", "transcript": "Il codice di delega è di L G sei U E H", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "delegation_ref-4.natural", "transcript": "Il codice di delega è di L G 6 U E H", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "delegation_ref-4.natural", "transcript": "Il codice di delega è di L G 6 U E H", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "delegation_ref-4.natural", "transcript": "Il codice di delega è DLG6UEH", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "delegation_ref-4.natural", "transcript": "Il codice di delega è DLG6UEH", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "delegation_ref-4.natural", "transcript": "Il codice di delega è DLG6UEH", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "delegation_ref-4.spelled", "transcript": "Il codice di delega è D come Domodossola, L come Livorno, G come Genova, sei, U come Udine, E come Empoli, H come hotel", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "delegation_ref-4.spelled", "transcript": "Il codice di delega è D come Domodossola, L come Livorno, G come Genova, sei, U come Udine, E come Empoli, H come hotel", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "delegation_ref-4.spelled", "transcript": "Il codice di delega è D come Domodossola, L come Livorno, G come Genova, sei, U come Udine, E come Empoli, H come hotel", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "delegation_ref-4.spelled", "transcript": "Il codice di delega è D come Domodossola, L come Livorno, G come Genova, 6, U come Udine, E come Empoli, H come hotel", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "delegation_ref-4.spelled", "transcript": "Il codice di delega è D come Domodossola, L come Livorno, G come Genova, sei, U come Udine, E come Empoli, H come Hotel", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "delegation_ref-4.spelled", "transcript": "Il codice di delega è D come Domodossola, L come Livorno, G come Genova, sei, U come Udine, E come Empoli, H come Hotel", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "fiscal_code-1.natural", "transcript": "Il codice fiscale è MMCFCP67A27Y999V", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "fiscal_code-1.natural", "transcript": "Il codice fiscale è MMCFCP67A27Y999V", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "fiscal_code-1.natural", "transcript": "Il codice fiscale è MMCFCP67A27Y999V", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "fiscal_code-1.natural", "transcript": "Il codice fiscale è M MCFC P67A27Y999V", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "fiscal_code-1.natural", "transcript": "Il codice fiscale è MMCFCP67A27Y999V", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "fiscal_code-1.natural", "transcript": "Il codice fiscale è M M C E F C P sei sette A due sette Y nove nove nove V", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "fiscal_code-1.spelled", "transcript": "Il codice fiscale è M come Milano, M come Milano, C come Como, F come Firenze, C come Como, P come Palermo, 67A come Ancona, 27Y come Y, 999V come Venezia", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "fiscal_code-1.spelled", "transcript": "Il codice fiscale è M come Milano, M come Milano, C come Como, F come Firenze, C come Como, P come Palermo, sei sette, A come Ancona, due sette, X come Y, nove nove nove, V come Venezia", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "fiscal_code-1.spelled", "transcript": "Il codice fiscale è M come Milano, M come Milano, C come Como, F come Firenze, C come Como, P come Palermo, 67, A come Ancona, 27, X come Y, 999, V come Venezia", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "fiscal_code-1.spelled", "transcript": "Il codice fiscale è: M come Milano, M come Milano, C come Como, F come Firenze, C come Como, P come Palermo, sei, sette, A come Ancona, due, sette, I come Y, nove, nove, nove, V come Venezia", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "fiscal_code-1.spelled", "transcript": "Il codice fiscale è: M come Milano, M come Milano, C come Como, F come Firenze, C come Como, P come Palermo, 67A come Ancona, 27I come Y, 999V come Venezia", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "fiscal_code-1.spelled", "transcript": "Il codice fiscale è: M come Milano, M come Milano, C come Como, F come Firenze, C come Como, P come Palermo, sei sette, A come Ancona, due sette, I come Y, nove nove nove, V come Venezia", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "fiscal_code-2.natural", "transcript": "Il codice fiscale è GPZSDC 77R21Y999H", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "fiscal_code-2.natural", "transcript": "Il codice fiscale è GPZSDC 77R21Y999H", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "fiscal_code-2.natural", "transcript": "Il codice fiscale è GPZSDC77R21Y999H", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "fiscal_code-2.natural", "transcript": "Il codice fiscale è GPZSDC77R21Y999H", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "fiscal_code-2.natural", "transcript": "Il codice fiscale è GPZSDC77R21Y999H", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "fiscal_code-2.natural", "transcript": "Il codice fiscale è GPZSDC77R21Y999H", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "fiscal_code-2.spelled", "transcript": "Il codice fiscale è G come Genova, P come Palermo, Z come Zara, S come Savona, D come Domodossola, C come Como, 77R come Roma, 21X come Y, 999H come hotel", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "fiscal_code-2.spelled", "transcript": "Il codice fiscale è G come Genova, P come Palermo, Z come Zara, S come Savona, D come Domodossola, C come Como, 77R come Roma, 21X come Y, 999H come hotel", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "fiscal_code-2.spelled", "transcript": "Il codice fiscale è G come Genova, P come Palermo, Z come Zara, S come Savona, D come Domodossola, C come Como, sette sette, R come Roma, due uno, X come Y, nove nove nove, H come hotel", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "fiscal_code-2.spelled", "transcript": "Il codice fiscale è G come Genova, P come Palermo, Z come Zara, S come Savona, D come Domodossola, C come Como, sette, sette, R come Roma, due, uno, I tono come Y, nove, nove, nove, H come hotel", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "fiscal_code-2.spelled", "transcript": "Il codice fiscale è: G come Genova, P come Palermo, Z come Zara, S come Savona, D come Domodossola, C come Como, sette, sette, R come Roma, due, uno, I tono come Y, nove, nove, nove, H come hotel", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "fiscal_code-2.spelled", "transcript": "Il codice fiscale è G come Genova, P come Palermo, Z come Zara, S come Savona, D come Domodossola, C come Como, sette, sette, R come Roma, due, uno, I tono come Y, nove, nove, nove, H come hotel", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "fiscal_code-3.natural", "transcript": "Il codice fiscale è FVDTVF45R50Y999W", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "fiscal_code-3.natural", "transcript": "Il codice fiscale è FVDTVF 45R50Y999W", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "fiscal_code-3.natural", "transcript": "Il codice fiscale è FVDTVF45R50Y999W", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "fiscal_code-3.natural", "transcript": "Il codice fiscale è FVDTVF45R50Y999W", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "fiscal_code-3.natural", "transcript": "Il codice fiscale è FVDTVF45R50Y999W", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "fiscal_code-3.natural", "transcript": "Il codice fiscale è FVDTVF45R50Y999W", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "fiscal_code-3.spelled", "transcript": "Il codice fiscale è F come Firenze, V come Venezia, D come Domodossola, T come Torino, V come Venezia, F come Firenze, quattro cinque, R come Roma, cinque zero, Y come Y, nove nove nove, W come Washington", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "fiscal_code-3.spelled", "transcript": "Il codice fiscale è F come Firenze, V come Venezia, D come Domodossola, T come Torino, V come Venezia, F come Firenze, quattro cinque, R come Roma, cinque zero, Y come Y, nove nove nove, W come Washington", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "fiscal_code-3.spelled", "transcript": "Il codice fiscale è F come Firenze, V come Venezia, D come Domodossola, T come Torino, V come Venezia, F come Firenze, quattro cinque, R come Roma, cinque zero, X come Y, nove nove nove, W come Washington", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "fiscal_code-3.spelled", "transcript": "Il codice fiscale è F come Firenze, V come Venezia, D come Domodossola, T come Torino, V come Venezia, F come Firenze, quattro, cinque, R come Roma, cinque, zero, X come Y, nove, nove, nove, W come Washington", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "fiscal_code-3.spelled", "transcript": "Il codice fiscale è: F come Firenze, V come Venezia, D come Domodossola, T come Torino, V come Venezia, F come Firenze, quattro, cinque, R come Roma, cinque, zero, Y come Y, nove, nove, nove, W come Washington", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "fiscal_code-3.spelled", "transcript": "Il codice fiscale è F come Firenze, V come Venezia, D come Domodossola, T come Torino, V come Venezia, F come Firenze, quattro, cinque, R come Roma, cinque, zero, Y come Y, nove, nove, nove, W come Washington", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "fiscal_code-4.natural", "transcript": "Il codice fiscale è C V P R V Z sei zero H sei tre Y nove nove nove T", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "fiscal_code-4.natural", "transcript": "Il codice fiscale è C V P R V Z sei zero H sei tre Y nove nove nove T", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "fiscal_code-4.natural", "transcript": "Il codice fiscale è C V P R V Z sei zero H sei tre Y nove nove nove T.", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "fiscal_code-4.natural", "transcript": "Il codice fiscale è CVPRVZ60H63Y999T", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "fiscal_code-4.natural", "transcript": "Il codice fiscale è CVPRVZ60H63Y999T", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "fiscal_code-4.natural", "transcript": "Il codice fiscale è CVP RVZ sei zero H sei tre Y nove nove nove T.", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "fiscal_code-4.spelled", "transcript": "Il codice fiscale è C come Como, V come Venezia, P come Palermo, R come Roma, V come Venezia, Z come Zara, sei, zero, H come hotel, sei, tre, I come Y, nove, nove, nove, T come Torino", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "fiscal_code-4.spelled", "transcript": "Il codice fiscale è C come Como, V come Venezia, P come Palermo, R come Roma, V come Venezia, Z come Zara, sei, zero, H come hotel, sei, tre, ITE come Y, nove, nove, nove, T come Torino", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "fiscal_code-4.spelled", "transcript": "Il codice fiscale è C come Como, V come Venezia, P come Palermo, R come Roma, V come Venezia, Z come Zara, sei, zero, H come hotel, sei, tre, ITE come Y, nove, nove, nove, T come Torino", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "fiscal_code-4.spelled", "transcript": "Il codice fiscale è C come Como, V come Venezia, P come Palermo, R come Roma, V come Venezia, Z come Zara, sei zero, H come hotel, sei tre, I come ipsilon, nove, nove, nove, T come Torino", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "fiscal_code-4.spelled", "transcript": "Il codice fiscale è C come Como, V come Venezia, P come Palermo, R come Roma, V come Venezia, Z come Zara, sei zero, H come hotel, sei tre, I come Y, nove, nove, nove, T come Torino", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "fiscal_code-4.spelled", "transcript": "Il codice fiscale è C come Como, V come Venezia, P come Palermo, R come Roma, V come Venezia, Z come Zara, sei zero, H come hotel, sei tre, I come Y, nove, nove, nove, T come Torino", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "iban-1.natural", "transcript": "L'IBAN per l'addebito è IT63G99999999094650323160", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "iban-1.natural", "transcript": "L'IBAN per l'addebito è IT63G9999999999094650323160", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "iban-1.natural", "transcript": "L'IBAN per l'addebito è IT63G99999999094650323160.", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "iban-1.natural", "transcript": "L'IBAN per l'addebito è IT63G99999999094650323160", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "iban-1.natural", "transcript": "L'IBAN per l'addebito è IT63J99999999094650323160", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "iban-1.natural", "transcript": "L'IBAN per l'addebito è IT63G99999999094650323160", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "iban-1.spelled", "transcript": "L'IBAN per l'addebito è I come Imola, T come Torino, sei, tre, G come Genova, nove, nove, nove, nove, nove, nove, nove, nove, nove, nove, zero, nove, quattro, sei, cinque, zero, tre, due, tre, uno, sei, zero", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "iban-1.spelled", "transcript": "L'IBAN per l'addebito è I come Imola, T come Torino, sei, tre, G come Genova, nove, nove, nove, nove, nove, nove, nove, nove, nove, nove, zero, nove, quattro, sei, cinque, zero, tre, due, tre, uno, sei, zero", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "iban-1.spelled", "transcript": "L'IBAN per l'addebito è I come Imola, T come Torino, sei, tre, G come Genova, nove, nove, nove, nove, nove, nove, nove, nove, nove, nove, zero, nove, quattro, sei, cinque, zero, tre, due, tre, uno, sei, zero", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "iban-1.spelled", "transcript": "L'IBAN per l'addebito è I come Imola, T come Torino, 6, 3, G come Genova, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 0, 9, 4, 6, 5, 0, 3, 2, 3, 1, 6, 0", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "iban-1.spelled", "transcript": "L'IBAN per l'addebito è I come Imola, T come Torino, sei, tre, G come Genova, nove, nove, nove, nove, nove, nove, nove, nove, nove, nove, nove, zero, nove, quattro, sei cinque zero, tre due tre uno sei zero", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "iban-1.spelled", "transcript": "L'IBAN per l'addebito è I come Imola, T come Torino, sei, tre, G come Genova, nove, nove, nove, nove, nove, nove, nove, nove, nove, nove, zero, nove, quattro, sei cinque zero, tre due tre uno sei zero", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "iban-2.natural", "transcript": "L'IBAN per l'addebito è IT35R99999999627571139008.", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "iban-2.natural", "transcript": "L'IBAN per l'addebito è IT35R99999999627571139008", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "iban-2.natural", "transcript": "L'IBAN per l'addebito è IT35R99999999627571139008.", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "iban-2.natural", "transcript": "L'IBAN per l'addebito è IT35R99999999627571139008.", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "iban-2.natural", "transcript": "L'IBAN per l'addebito è IT35R99999999627571139008", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "iban-2.natural", "transcript": "L'IBAN per l'addebito è IT35R99999999627571139008", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "iban-2.spelled", "transcript": "L'IBAN per l'addebito è: I come Imola, T come Torino, tre, cinque, R come Roma, nove, nove, nove, nove, nove, nove, nove, nove, nove, nove, sei, due, sette, cinque, sette, uno, uno, tre, nove, zero, zero, otto.", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "iban-2.spelled", "transcript": "L'IBAN per l'addebito è: I come Imola, T come Torino, tre, cinque, R come Roma, nove, nove, nove, nove, nove, nove, nove, nove, nove, nove, sei, due, sette, cinque, sette, uno, uno, tre, nove, zero, zero, otto.", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "iban-2.spelled", "transcript": "L'IBAN per l'addebito è: I come Imola, T come Torino, tre, cinque, R come Roma, nove, nove, nove, nove, nove, nove, nove, nove, nove, nove, sei, due, sette, cinque, sette, uno, uno, tre, nove, zero, zero, otto.", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "iban-2.spelled", "transcript": "L'IBAN per la debito è I come Imola, T come Torino, tre, cinque, R come Roma, nove, nove, nove, nove, nove, nove, nove, nove, nove, nove, sei, due, sette, cinque, sette, uno, uno, tre, nove, zero, zero, otto", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "iban-2.spelled", "transcript": "L'IBAN per l'addebito è I come Imola, T come Torino, tre, cinque, R come Roma, nove, nove, nove, nove, nove, nove, nove, nove, nove, nove, sei, due, sette, cinque, sette, uno, uno, tre, nove, zero, zero, otto", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "iban-2.spelled", "transcript": "L'IBAN per l'addebito è I come Imola, T come Torino, tre, cinque, R come Roma, nove, nove, nove, nove, nove, nove, nove, nove, nove, nove, sei, due, sette, cinque, sette, uno, uno, tre, nove, zero, zero, otto", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "iban-3.natural", "transcript": "L'IBAN per l'addebito è IT49O99999999327970498904", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "iban-3.natural", "transcript": "L'IBAN per l'addebito è IT49O99999999327970498904", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "iban-3.natural", "transcript": "L'IBAN per l'addebito è IT49O99999999327970498904", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "iban-3.natural", "transcript": "L'IBAN per l'addebito è IT49O99999999327970498904", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "iban-3.natural", "transcript": "L'IBAN per l'addebito è IT49O99999999327970498904", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "iban-3.natural", "transcript": "L'IBAN per l'addebito è IT49O99999999327970498904", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "iban-3.spelled", "transcript": "L'IBAN per l'addebito è I come Imola, T come Torino, quattro, nove, O come Otranto, nove, nove, nove, nove, nove, nove, nove, nove, nove, nove, tre, due, sette, nove, sette, zero, quattro, nove, otto, nove, zero, quattro.", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "iban-3.spelled", "transcript": "L'IBAN per l'addebito è I come Imola, T come Torino, quattro, nove, O come Otranto, nove, nove, nove, nove, nove, nove, nove, nove, nove, nove, tre, due, sette, nove, sette, zero, quattro, nove, otto, nove, zero, quattro.", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "iban-3.spelled", "transcript": "L'IBAN per l'addebito è I come Imola, T come Torino, quattro, nove, O come Otranto, nove, nove, nove, nove, nove, nove, nove, nove, nove, nove, tre, due, sette, nove, sette, zero, quattro, nove, otto, nove, zero, quattro.", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "iban-3.spelled", "transcript": "L'IBAN per l'addebito è I come Imola, T come Torino, quattro, nove, O come Otranto, nove, nove, nove, nove, nove, nove, nove, nove, nove, nove, tre, due, sette, nove, sette, zero, quattro, nove, otto, nove, zero, quattro", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "iban-3.spelled", "transcript": "L'IBAN per l'addebito è I come Imola, T come Torino, quattro, nove, O come Otranto, nove, nove, nove, nove, nove, nove, nove, nove, nove, nove, nove, tre, due, sette, nove, sette, zero, quattro, nove, otto, nove, zero, quattro.", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "iban-3.spelled", "transcript": "L'IBAN per l'addebito è I come Imola, T come Torino quattro nove, O come Otranto nove nove nove nove nove nove nove nove nove nove tre due sette nove sette zero quattro nove otto nove zero quattro", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "iban-4.natural", "transcript": "L'IBAN per l'addebito è IT91B99999999738571248116", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "iban-4.natural", "transcript": "L'IBAN per l'addebito è IT91B99999999738571248116", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "iban-4.natural", "transcript": "L'IBAN per l'addebito è IT91B99999999738571248116", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "iban-4.natural", "transcript": "L'IBAN per l'addebito è IT91B99999999738571248116.", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "iban-4.natural", "transcript": "L'IBAN per l'addebito è IT91B99999999738571248116", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "iban-4.natural", "transcript": "L'IBAN per l'addebito è IT91B99999999738571248116", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "iban-4.spelled", "transcript": "L'IBAN per l'addebito è I come Imola, T come Torino, nove, uno, B come Bologna, nove, nove, nove, nove, nove, nove, nove, nove, nove, nove, sette, tre, otto, cinque, sette, uno, due, quattro, otto, uno, uno, sei.", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "iban-4.spelled", "transcript": "L'IBAN per l'addebito è I come Imola, T come Torino, nove, uno, B come Bologna, nove, nove, nove, nove, nove, nove, nove, nove, nove, nove, sette, tre, otto, cinque, sette, uno, due, quattro, otto, uno, uno, sei.", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "iban-4.spelled", "transcript": "L'IBAN per la debito è I come Imola, T come Torino, nove, uno, B come Bologna, nove, nove, nove, nove, nove, nove, nove, nove, nove, nove, sette, tre, otto, cinque, sette, uno, due, quattro, otto, uno, uno, sei", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "iban-4.spelled", "transcript": "L'IBAN per l'addebito è I come Imola, T come Torino, nove, uno, B come Bologna, nove, nove, nove, nove, nove, nove, nove, nove, nove, nove, nove, sette, tre, otto, cinque, sette, uno, due, quattro, otto, uno, uno, sei", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "iban-4.spelled", "transcript": "L'IBAN per l'addebito è I come Imola, T come Torino, nove, uno, B come Bologna, nove, nove, nove, nove, nove, nove, nove, nove, nove, nove, nove, sette, tre, otto, cinque, sette, uno, due, quattro, otto, uno, uno, sei", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "iban-4.spelled", "transcript": "L'IBAN per l'addebito è I come Imola, T come Torino, nove, uno, B come Bologna, nove, nove, nove, nove, nove, nove, nove, nove, nove, nove, nove, sette, tre, otto, cinque, sette, uno, due, quattro, otto, uno, uno, sei", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "meter_reading-1.natural", "transcript": "La lettura del contatore è cinquantasettemilanovecentotrentuno", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "meter_reading-1.natural", "transcript": "La lettura del contatore è 57.931", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "meter_reading-1.natural", "transcript": "La lettura del contatore è 57.931", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "meter_reading-1.natural", "transcript": "La lettura del contatore è cinquantasette mila novecento trentuno", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "meter_reading-1.natural", "transcript": "La lettura del contatore è cinquantasettemilanovecentotrentuno", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "meter_reading-1.natural", "transcript": "La lettura del contatore è cinquantasettemilanovecentotrentuno", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "meter_reading-1.spelled", "transcript": "La lettura del contatore è cinque sette nove tre uno", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "meter_reading-1.spelled", "transcript": "La lettura del contatore è cinque sette nove tre uno", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "meter_reading-1.spelled", "transcript": "La lettura del contatore è cinque sette nove tre uno", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "meter_reading-1.spelled", "transcript": "La lettura del contatore è cinque, sette, nove, tre, uno", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "meter_reading-1.spelled", "transcript": "La lettura del contatore è cinque, sette, nove, tre, uno", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "meter_reading-1.spelled", "transcript": "La lettura del contatore è cinque, sette, nove, tre, uno", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "meter_reading-2.natural", "transcript": "La lettura del contatore è 27.455", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "meter_reading-2.natural", "transcript": "La lettura del contatore è 27.455", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "meter_reading-2.natural", "transcript": "La lettura del contatore è 27.455", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "meter_reading-2.natural", "transcript": "La lettura del contatore è 27.455.", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "meter_reading-2.natural", "transcript": "La lettura del contatore è 27.455", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "meter_reading-2.natural", "transcript": "La lettura del contatore è ventisettemilaquattrocentocinquantacinque", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "meter_reading-2.spelled", "transcript": "La lettura del contatore è due sette quattro cinque cinque", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "meter_reading-2.spelled", "transcript": "La lettura del contatore è due sette quattro cinque cinque", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "meter_reading-2.spelled", "transcript": "La lettura del contatore è due sette quattro cinque cinque", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "meter_reading-2.spelled", "transcript": "La lettura del contatore è due sette quattro cinque cinque", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "meter_reading-2.spelled", "transcript": "La lettura del contatore è due, sette, quattro, cinque, cinque", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "meter_reading-2.spelled", "transcript": "La lettura del contatore è due sette quattro cinque cinque", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "meter_reading-3.natural", "transcript": "La lettura del contatore è 66.045", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "meter_reading-3.natural", "transcript": "La lettura del contatore è 66.045", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "meter_reading-3.natural", "transcript": "La lettura del contatore è 66.045", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "meter_reading-3.natural", "transcript": "La lettura del contatore è 66.045", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "meter_reading-3.natural", "transcript": "La lettura del contatore è 66.045", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "meter_reading-3.natural", "transcript": "La lettura del contatore è sessantaseimilaquarantacinque", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "meter_reading-3.spelled", "transcript": "La lettura del contatore è sei sei zero quattro cinque", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "meter_reading-3.spelled", "transcript": "La lettura del contatore è 66045", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "meter_reading-3.spelled", "transcript": "La lettura del contatore è 66045", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "meter_reading-3.spelled", "transcript": "La lettura del contatore è sei sei zero quattro cinque.", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "meter_reading-3.spelled", "transcript": "La lettura del contatore è sei sei zero quattro cinque.", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "meter_reading-3.spelled", "transcript": "La lettura del contatore è sei sei zero quattro cinque", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "meter_reading-4.natural", "transcript": "La lettura del contatore è 54.833", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "meter_reading-4.natural", "transcript": "La lettura del contatore è 54.833", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "meter_reading-4.natural", "transcript": "La lettura del contatore è 54.833", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "meter_reading-4.natural", "transcript": "La lettura del contatore è cinquantaquattromilaottocentotrentatré.", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "meter_reading-4.natural", "transcript": "La lettura del contatore è cinquantaquattromilaottocentotrentatré", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "meter_reading-4.natural", "transcript": "La lettura del contatore è cinquantaquattromilaottocentotrentatré", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "meter_reading-4.spelled", "transcript": "La lettura del contatore è cinque quattro otto tre tre", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "meter_reading-4.spelled", "transcript": "La lettura del contatore è cinque quattro otto tre tre", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "meter_reading-4.spelled", "transcript": "La lettura del contatore è cinque quattro otto tre tre", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "meter_reading-4.spelled", "transcript": "La lettura del contatore è cinque quattro otto tre tre", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "meter_reading-4.spelled", "transcript": "La lettura del contatore è cinque quattro otto tre tre", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "meter_reading-4.spelled", "transcript": "La lettura del contatore è cinque quattro otto tre tre", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "pod-1.natural", "transcript": "Il codice POD è IT 99 9 E 68 10 68 71", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "pod-1.natural", "transcript": "Il codice POD è IT999E68106871", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "pod-1.natural", "transcript": "Il codice POD è IT 99 9 E 68 10 68 71", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "pod-1.natural", "transcript": "Il codice POD è IT999E68106871", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "pod-1.natural", "transcript": "Il codice POD è IT999E68106871", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "pod-1.natural", "transcript": "Il codice POD è IT999E68106871", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "pod-1.spelled", "transcript": "Il codice POD è I come Imola, T come Torino, nove, nove, nove, E come Empoli, sei, otto, uno, zero, sei, otto, sette, uno", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "pod-1.spelled", "transcript": "Il codice POD è I come Imola, T come Torino, nove, nove, nove, E come Empoli, sei, otto, uno, zero, sei, otto, sette, uno.", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "pod-1.spelled", "transcript": "Il codice POD è I come Imola, T come Torino nove nove nove, E come Empoli sei otto uno zero sei otto sette uno", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "pod-1.spelled", "transcript": "Il codice POD è I come Imola, T come Torino, nove, nove, nove, E come Empoli, sei, otto, uno, zero, sei, otto, sette, uno.", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "pod-1.spelled", "transcript": "Il codice POD è I come Imola, T come Torino, nove, nove, nove, E come Empoli, sei, otto, uno, zero, sei, otto, sette, uno.", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "pod-1.spelled", "transcript": "Il codice POD è I come Imola, T come Torino nove nove nove, E come Empoli di sei otto uno zero sei otto sette uno.", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "pod-2.natural", "transcript": "Il codice POD è IT 99 9 E 19 36 15 89", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "pod-2.natural", "transcript": "Il codice POD è IT 999E19361589", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "pod-2.natural", "transcript": "Il codice POD è IT 99 9 E 19 36 15 89", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "pod-2.natural", "transcript": "Il codice POD è IT999E19361589", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "pod-2.natural", "transcript": "Il codice POD è IT999E19361589", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "pod-2.natural", "transcript": "Il codice POD è IT novantanove nove e diciannove trentasei quindici ottantanove", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "pod-2.spelled", "transcript": "Il codice POD è I come Imola, T come Torino nove, nove, nove, E come Empoli uno, nove, tre, sei, uno, cinque, otto, nove", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "pod-2.spelled", "transcript": "Il codice POD è I come Imola, T come Torino nove nove nove, E come Empoli uno nove tre sei uno cinque otto nove", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "pod-2.spelled", "transcript": "Il codice POD è I come Imola, T come Torino nove nove nove, E come Empoli uno nove tre sei uno cinque otto nove", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "pod-2.spelled", "transcript": "Il codice POD è I come Imola, T come Torino, nove, nove, nove. E come Empoli, uno, nove, tre, sei, uno, cinque, otto, nove.", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "pod-2.spelled", "transcript": "Il codice POD è I come Imola, T come Torino nove, nove, nove, E come Empoli uno, nove, tre, sei, uno, cinque, otto, nove.", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "pod-2.spelled", "transcript": "Il codice POD è I come Imola, T come Torino nove nove nove, E come Empoli uno nove tre sei uno cinque otto nove", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "pod-3.natural", "transcript": "Il codice POD è IT999E78592782", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "pod-3.natural", "transcript": "Il codice POD è IT999E78592782", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "pod-3.natural", "transcript": "Il codice POD è IT999E78592782", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "pod-3.natural", "transcript": "Il codice POD è IT999E78592782.", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "pod-3.natural", "transcript": "Il codice POD è IT999E78592782.", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "pod-3.natural", "transcript": "Il codice pod è IT999E78592782.", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "pod-3.spelled", "transcript": "Il codice POD è I come Imola, T come Torino, nove, nove, nove, E come Empoli, sette, otto, cinque, nove, due, sette, otto, due", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "pod-3.spelled", "transcript": "Il codice POD è I come Imola, T come Torino, nove, nove, nove, E come Empoli sette, otto, cinque, nove, due, sette, otto, due", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "pod-3.spelled", "transcript": "Il codice POD è I come Imola, T come Torino nove nove nove, E come Empoli sette otto cinque nove due sette otto due", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "pod-3.spelled", "transcript": "Il codice POD è I come Imola, T come Torino, nove, nove, nove, E come Empoli sette, otto, cinque, nove, due, sette, otto, due.", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "pod-3.spelled", "transcript": "Il codice POD è I come Imola, T come Torino nove, nove, nove, E come Empoli sette, otto, cinque, nove, due, sette, otto, due.", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "pod-3.spelled", "transcript": "Il codice POD è I come Imola, T come Torino, nove, nove, nove, E come Empoli sette, otto, cinque, nove, due, sette, otto, due.", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "pod-4.natural", "transcript": "Il codice POD è I T 99 9 e 56 59 93 95", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "pod-4.natural", "transcript": "Il codice pod è IT999E56599395", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "pod-4.natural", "transcript": "Il codice POD è I T 99 9 E 56 59 93 95", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "pod-4.natural", "transcript": "Il codice POD è IT999E56599395", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "pod-4.natural", "transcript": "Il codice POD è IT999E56599395.", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "pod-4.natural", "transcript": "Il codice POD è IT novantanove nove e cinquantasei cinquantanove novantatré novantacinque.", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "pod-4.spelled", "transcript": "Il codice POD è I come Imola, T come Torino, nove, nove, nove, E come Empoli, cinque, sei, cinque, nove, nove, tre, nove, cinque", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "pod-4.spelled", "transcript": "Il codice POD è I come Imola, T come Torino, nove, nove, nove, E come Empoli, cinque, sei, cinque, nove, nove, tre, nove, cinque", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "pod-4.spelled", "transcript": "Il codice POD è I come Imola, T come Torino, nove, nove, nove, E come Empoli, cinque, sei, cinque, nove, nove, tre, nove, cinque", "voice": "default-f"}
+{"asr": "scribe_v1", "channel": "clean", "clip": "pod-4.spelled", "transcript": "Il codice POD è I come Imola, T come Torino, nove, nove, nove, E come Empoli, cinque, sei, cinque, nove, nove, tre, nove, cinque", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone", "clip": "pod-4.spelled", "transcript": "Il codice POD è I come Imola, T come Torino, nove, nove, nove, E come Empoli, cinque, sei, cinque, nove, nove, tre, nove, cinque", "voice": "native-m"}
+{"asr": "scribe_v1", "channel": "phone_noise", "clip": "pod-4.spelled", "transcript": "Il codice POD è I come Imola, T come Torino, nove, nove, nove, E come Empoli, cinque, sei, cinque, nove, nove, tre, nove, cinque", "voice": "native-m"}

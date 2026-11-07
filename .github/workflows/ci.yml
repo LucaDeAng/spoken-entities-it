@@ -1,0 +1,15 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync --locked
+      - run: uv run pytest -q
+      # Results come from the cached transcripts and Claude extractions in data/: no keys, no audio.
+      - name: results are up to date
+        run: |
+          uv run python -m spoken_entities.score
+          test -z "$(git status --porcelain -- docs/results.md)" || { git diff -- docs/results.md; echo "docs/results.md is stale: run python -m spoken_entities.score"; exit 1; }
