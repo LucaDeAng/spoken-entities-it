@@ -55,6 +55,67 @@ Counts over all 384 recordings per extractor. A value marked unsure is a re-ask 
 | claude-opus-5-5 | the extractor's flag decides | 331 | 53 | 0 |
 | claude-opus-5-5 | the checksum overrules 'unsure' | 371 | 13 | 0 |
 
+## Recogniser
+
+The same recordings through Scribe v1, Scribe v2, and Scribe v2 with keyterms (the spelling alphabet, the letter names and the field names; never a test value). Same extractors, same headline set.
+
+| recogniser | extractor | n | correct | re-ask | of which right but unsure | silent wrong (95% CI) |
+|---|---|---|---|---|---|---|
+| Scribe v1 | rules | 384 | 97% | 3% | 0% | 0.0% (0.0%–1.0%) |
+| Scribe v1 | claude-haiku-5-5 | 384 | 83% | 17% | 5% | 0.0% (0.0%–1.0%) |
+| Scribe v1 | claude-opus-5-5 | 384 | 86% | 14% | 12% | 0.0% (0.0%–1.0%) |
+| Scribe v2 | rules | 384 | 95% | 4% | 0% | 0.5% (0.1%–1.9%) |
+| Scribe v2 | claude-haiku-5-5 | 384 | 84% | 16% | 5% | 0.3% (0.0%–1.5%) |
+| Scribe v2 | claude-opus-5-5 | 384 | 86% | 14% | 10% | 0.3% (0.0%–1.5%) |
+| Scribe v2 + keyterms | rules | 384 | 98% | 2% | 0% | 0.0% (0.0%–1.0%) |
+| Scribe v2 + keyterms | claude-haiku-5-5 | 384 | 84% | 16% | 4% | 0.3% (0.0%–1.5%) |
+| Scribe v2 + keyterms | claude-opus-5-5 | 384 | 86% | 14% | 13% | 0.0% (0.0%–1.0%) |
+
+Said natural:
+
+| recogniser | extractor | n | correct | re-ask | of which right but unsure | silent wrong (95% CI) |
+|---|---|---|---|---|---|---|
+| Scribe v1 | rules | 192 | 97% | 3% | 0% | 0.0% (0.0%–2.0%) |
+| Scribe v1 | claude-haiku-5-5 | 192 | 88% | 12% | 4% | 0.0% (0.0%–2.0%) |
+| Scribe v1 | claude-opus-5-5 | 192 | 84% | 16% | 14% | 0.0% (0.0%–2.0%) |
+| Scribe v2 | rules | 192 | 94% | 5% | 0% | 1.0% (0.3%–3.7%) |
+| Scribe v2 | claude-haiku-5-5 | 192 | 86% | 14% | 5% | 0.5% (0.1%–2.9%) |
+| Scribe v2 | claude-opus-5-5 | 192 | 85% | 14% | 9% | 0.5% (0.1%–2.9%) |
+| Scribe v2 + keyterms | rules | 192 | 97% | 3% | 0% | 0.0% (0.0%–2.0%) |
+| Scribe v2 + keyterms | claude-haiku-5-5 | 192 | 90% | 10% | 3% | 0.0% (0.0%–2.0%) |
+| Scribe v2 + keyterms | claude-opus-5-5 | 192 | 84% | 16% | 14% | 0.0% (0.0%–2.0%) |
+
+Said spelled:
+
+| recogniser | extractor | n | correct | re-ask | of which right but unsure | silent wrong (95% CI) |
+|---|---|---|---|---|---|---|
+| Scribe v1 | rules | 192 | 97% | 3% | 0% | 0.0% (0.0%–2.0%) |
+| Scribe v1 | claude-haiku-5-5 | 192 | 79% | 21% | 7% | 0.0% (0.0%–2.0%) |
+| Scribe v1 | claude-opus-5-5 | 192 | 89% | 11% | 10% | 0.0% (0.0%–2.0%) |
+| Scribe v2 | rules | 192 | 97% | 3% | 0% | 0.0% (0.0%–2.0%) |
+| Scribe v2 | claude-haiku-5-5 | 192 | 82% | 18% | 4% | 0.0% (0.0%–2.0%) |
+| Scribe v2 | claude-opus-5-5 | 192 | 86% | 14% | 12% | 0.0% (0.0%–2.0%) |
+| Scribe v2 + keyterms | rules | 192 | 98% | 2% | 0% | 0.0% (0.0%–2.0%) |
+| Scribe v2 + keyterms | claude-haiku-5-5 | 192 | 78% | 22% | 5% | 0.5% (0.1%–2.9%) |
+| Scribe v2 + keyterms | claude-opus-5-5 | 192 | 87% | 13% | 11% | 0.0% (0.0%–2.0%) |
+
+Wrong values with Scribe v2 (missing values are not listed):
+
+| recogniser | extractor | type | style | channel | voice | true | extracted | caught by |
+|---|---|---|---|---|---|---|---|---|
+| Scribe v2 | rules | delegation_ref | natural | phone | native-m | `DLG-D3DQ` | `DLG-ID3D` | NOTHING (silent wrong) |
+| Scribe v2 | rules | delegation_ref | natural | clean | native-m | `DLG-GEDP` | `DLG-DEDP` | NOTHING (silent wrong) |
+| Scribe v2 | claude-haiku-5-5 | delegation_ref | natural | phone | default-f | `DLG-K3DE` | `DLG-LGK3DE` | unsure flag |
+| Scribe v2 | claude-haiku-5-5 | delegation_ref | natural | clean | native-m | `DLG-GEDP` | `DLG-DEDP` | NOTHING (silent wrong) |
+| Scribe v2 | claude-haiku-5-5 | fiscal_code | natural | clean | native-m | `NSPFRV49R33H501B` | `NSPFRV4R33H501B` | unsure flag |
+| Scribe v2 | claude-haiku-5-5 | fiscal_code | natural | phone_noise | native-m | `NSPFRV49R33H501B` | `NSPFRV4R33H501B` | checksum |
+| Scribe v2 | claude-haiku-5-5 | iban | spelled | clean | default-f | `IT75K0049660179500309582313` | `IT75C0049660170950030952313` | checksum |
+| Scribe v2 | claude-haiku-5-5 | iban | spelled | phone | default-f | `IT75K0049660179500309582313` | `IT75C0049660179500309582313` | checksum |
+| Scribe v2 | claude-opus-5-5 | delegation_ref | natural | clean | native-m | `DLG-GEDP` | `DLG-DEDP` | NOTHING (silent wrong) |
+| Scribe v2 | claude-opus-5-5 | iban | spelled | phone | native-m | `IT42F0852253433989879679940` | `IT42F0852253433989879799940` | checksum |
+| Scribe v2 + keyterms | claude-haiku-5-5 | delegation_ref | natural | clean | default-f | `DLG-6UEH` | `DLG-LG6UEH` | unsure flag |
+| Scribe v2 + keyterms | claude-haiku-5-5 | pod | spelled | clean | native-m | `IT999E56599395` | `IT999E65599395` | NOTHING (silent wrong) |
+
 ## v1 against v2 long codes
 
 v1 IBANs carried ten nines in a row and v1 fiscal codes the place code Y999, to make them unassignable; v2 uses realistic patterns (a wrong national check letter in the IBAN, a day of birth of 32-40 in the fiscal code). Every other table uses v2.

@@ -161,10 +161,13 @@ def to_symbols(text: str) -> str:
     Number words become digits, spelled letters become letters; everything else is dropped.
     """
     t = _strip_accents(text)
-    # "D come Domodossola" -> " D ", also when the recogniser glues a digit on: "3D come Domodossola"
-    t = re.sub(r"(?<![A-Za-z])([A-Za-z])\s+come\s+\w+", r" \1 ", t)
     t = re.sub(r"\bdoppia\s+vu\b", " W ", t, flags=re.IGNORECASE)  # two-word letter names
     t = re.sub(r"\bi\s+lunga\b", " J ", t, flags=re.IGNORECASE)
+    # The letter written by name: "effe come Firenze" -> " F " (Scribe v2 with keyterms writes this)
+    t = re.sub(rf"\b({'|'.join(n for n in _NAME_TO_LETTER if len(n) > 1)})\s+come\s+\w+",
+               lambda m: f" {_NAME_TO_LETTER[m.group(1).lower()]} ", t, flags=re.IGNORECASE)
+    # "D come Domodossola" -> " D ", also when the recogniser glues a digit on: "3D come Domodossola"
+    t = re.sub(r"(?<![A-Za-z])([A-Za-z])\s+come\s+\w+", r" \1 ", t)
     out = []
     for tok in _merge_split_numbers(re.findall(r"[A-Za-z]+|\d+|[,;.]", t)):
         if tok in ",;.":

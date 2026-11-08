@@ -3,6 +3,7 @@
     uv run python -m spoken_entities.pipeline tts        # ElevenLabs, audio/ (not committed)
     uv run python -m spoken_entities.pipeline asr        # ElevenLabs Scribe -> data/transcripts.jsonl
     uv run python -m spoken_entities.pipeline extract    # Claude -> data/extractions.jsonl
+    # add --asr scribe_v2 or --asr scribe_v2_keyterms to asr and extract for the recogniser comparison
     uv run python -m spoken_entities.score               # data/ -> docs/results.md (no keys needed)
 
 Keys come from ELEVENLABS_API_KEY / ANTHROPIC_API_KEY, or ~/.secrets/{elevenlabs,anthropic}.env.
@@ -26,7 +27,9 @@ from typing import Any
 
 from spoken_entities.entities import FRAMES, build_set, clip_text
 from spoken_entities.italian import (
+    LETTER_NAMES,
     MONTHS,
+    SPELLING,
     _merge_split_numbers,
     _strip_accents,
     parse_number_word,
@@ -43,7 +46,18 @@ VOICES = {"default-f": "EXAVITQu4vr4xnSDxMaL", "native-m": "W71zT1VwIFFx3mMGH2uZ
 TTS_MODEL = "eleven_flash_v2_5"  # the low-latency model voice agents use
 STYLES = ("natural", "spelled")
 CHANNELS = ("clean", "phone", "phone_noise")
-ASR_MODEL = "scribe_v1"
+# Recogniser conditions. Keyterms are the spelling alphabet and the names of the fields, never a
+# test value: they tell the recogniser what kind of words to expect, not what the answer is.
+KEYTERMS = sorted(
+    set(SPELLING.values()) | {v for v in LETTER_NAMES.values() if len(v) > 2}
+    | {"IBAN", "codice fiscale", "codice POD", "codice cliente", "codice di delega", "autolettura"}
+)
+ASR = {
+    "scribe_v1": {"model_id": "scribe_v1"},
+    "scribe_v2": {"model_id": "scribe_v2"},
+    "scribe_v2_keyterms": {"model_id": "scribe_v2", "keyterms": KEYTERMS},
+}
+ASR_MODEL = "scribe_v1"  # the condition every headline table uses
 CLAUDE_MODELS = ["claude-haiku-5-5", "claude-opus-5-5"]
 
 
@@ -135,10 +149,12 @@ def _append(path: Path, rows: list[dict[str, Any]]) -> None:
             f.write(json.dumps(r, ensure_ascii=False, sort_keys=True) + "\n")
 
 
-def _scribe(path: Path, key: str) -> str:
+def _scribe(path: Path, key: str, asr: str = ASR_MODEL) -> str:
     b = uuid.uuid4().hex
-    fields = {"model_id": ASR_MODEL, "language_code": "ita", "tag_audio_events": "false"}
-    parts = [f'--{b}\r\nContent-Disposition: form-data; name="{k}"\r\n\r\n{v}\r\n'.encode() for k, v in fields.items()]
+    cond = ASR[asr]
+    fields = [("model_id", cond["model_id"]), ("language_code", "ita"), ("tag_audio_events", "false")]
+    fields += [("keyterms", k) for k in cond.get("keyterms", [])]  # a list is one form field per item
+    parts = [f'--{b}\r\nContent-Disposition: form-data; name="{k}"\r\n\r\n{v}\r\n'.encode() for k, v in fields]
     mime = "audio/mpeg" if path.suffix == ".mp3" else "audio/wav"
     parts.append(f'--{b}\r\nContent-Disposition: form-data; name="file"; filename="{path.name}"\r\n'
                  f"Content-Type: {mime}\r\n\r\n".encode() + path.read_bytes() + b"\r\n")
@@ -148,13 +164,13 @@ def _scribe(path: Path, key: str) -> str:
     return json.loads(urllib.request.urlopen(req, timeout=120).read())["text"]
 
 
-def run_asr() -> None:
+def run_asr(asr: str = ASR_MODEL) -> None:
     key = _key("ELEVENLABS_API_KEY", "elevenlabs")
     out = DATA / "transcripts.jsonl"
     done = {(r["clip"], r["voice"], r["channel"], r["asr"]) for r in _jsonl(out)}
     jobs = [(c, v, ch) for c in clips() for v in VOICES for ch in CHANNELS
-            if (c["clip"], v, ch, ASR_MODEL) not in done]
-    print(f"{len(jobs)} recordings to transcribe")
+            if (c["clip"], v, ch, asr) not in done]
+    print(f"{asr}: {len(jobs)} recordings to transcribe")
 
     import threading
 
@@ -163,11 +179,11 @@ def run_asr() -> None:
     def one(job):
         c, v, ch = job
         try:
-            text = _scribe(_channel(AUDIO / v / f"{c['clip']}.mp3", ch), key)
+            text = _scribe(_channel(AUDIO / v / f"{c['clip']}.mp3", ch), key, asr)
         except Exception as e:  # HTTP, network, missing audio, ffmpeg: retried on the next run
             return f"{v}/{c['clip']}/{ch}: {type(e).__name__} {str(e)[:200]}"
         with lock:
-            _append(out, [{"clip": c["clip"], "voice": v, "channel": ch, "asr": ASR_MODEL, "transcript": text}])
+            _append(out, [{"clip": c["clip"], "voice": v, "channel": ch, "asr": asr, "transcript": text}])
         return None
 
     with ThreadPoolExecutor(6) as pool:
@@ -272,7 +288,7 @@ def _claude(model: str, etype: str, transcript: str, client) -> dict[str, Any]:
     return {"value": p.value if p else None, "unsure": bool(p and p.unsure), "stop": r.stop_reason}
 
 
-def run_extract(models: list[str]) -> None:
+def run_extract(models: list[str], asr: str = ASR_MODEL) -> None:
     """Claude extractions, cached in data/extractions.jsonl (the rules extractor is free and runs at
     scoring time). Each result is appended as it arrives; a failed call is retried on the next run."""
     import threading
@@ -280,13 +296,14 @@ def run_extract(models: list[str]) -> None:
     import anthropic
 
     out = DATA / "extractions.jsonl"
-    done = {(r["clip"], r["voice"], r["channel"], r["extractor"]) for r in _jsonl(out)}
+    # Rows written before the recogniser comparison have no "asr" field: they are scribe_v1.
+    done = {(r["clip"], r["voice"], r["channel"], r["extractor"], r.get("asr", "scribe_v1")) for r in _jsonl(out)}
     meta = {c["clip"]: c for c in clips()}
-    transcripts = _jsonl(DATA / "transcripts.jsonl")
+    transcripts = [t for t in _jsonl(DATA / "transcripts.jsonl") if t["asr"] == asr]
     client = anthropic.Anthropic(api_key=_key("ANTHROPIC_API_KEY", "anthropic"), max_retries=4)
     lock = threading.Lock()
     for model in models:
-        jobs = [t for t in transcripts if (t["clip"], t["voice"], t["channel"], model) not in done]
+        jobs = [t for t in transcripts if (t["clip"], t["voice"], t["channel"], model, asr) not in done]
 
         def one(t, model=model):
             try:
@@ -294,25 +311,26 @@ def run_extract(models: list[str]) -> None:
             except Exception as e:  # API error or a reply that does not parse: retried next run
                 return f"{model} {t['clip']} {t['voice']} {t['channel']}: {type(e).__name__} {str(e)[:120]}"
             with lock:
-                _append(out, [{**{k: t[k] for k in ("clip", "voice", "channel")}, "extractor": model, **r}])
+                _append(out, [{**{k: t[k] for k in ("clip", "voice", "channel", "asr")}, "extractor": model, **r}])
             return None
 
         with ThreadPoolExecutor(8) as pool:
             errors = [e for e in pool.map(one, jobs) if e]
-        print(f"{model}: {len(jobs) - len(errors)} new, {len(errors)} failed", *errors[:5], sep="\n")
+        print(f"{model} on {asr}: {len(jobs) - len(errors)} new, {len(errors)} failed", *errors[:5], sep="\n")
 
 
 def main() -> None:
     p = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     p.add_argument("stage", choices=["tts", "asr", "extract"])
     p.add_argument("--models", nargs="*", default=CLAUDE_MODELS)
+    p.add_argument("--asr", choices=list(ASR), default=ASR_MODEL)
     a = p.parse_args()
     if a.stage == "tts":
         run_tts()
     elif a.stage == "asr":
-        run_asr()
+        run_asr(a.asr)
     else:
-        run_extract(a.models)
+        run_extract(a.models, a.asr)
 
 
 if __name__ == "__main__":

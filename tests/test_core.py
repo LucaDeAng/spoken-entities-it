@@ -55,6 +55,9 @@ def test_to_symbols_handles_recogniser_quirks():
     assert to_symbols("D come Domodossola, L come Livorno, G come Genova, sette") == "DLG7"
     assert to_symbols("K come Cappa, 3D come Domodossola") == "K3D"  # digit glued to the letter
     assert to_symbols("IT 63 G 9999") == "IT63G9999"
+    # Scribe v2 with keyterms writes the letter by name before "come": one letter, not two
+    assert to_symbols("effe come Firenze, ti come Torino, nove uno") == "FT91"
+    assert to_symbols("doppia vu come Washington, i lunga come jolly") == "WJ"
 
 
 @pytest.mark.parametrize("style", ["natural", "spelled"])

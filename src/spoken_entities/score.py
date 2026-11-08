@@ -46,20 +46,22 @@ def wilson(k: int, n: int, z: float = 1.96) -> tuple[float, float]:
 
 def rows() -> list[dict]:
     meta = {c["clip"]: c for c in clips()}
-    tr = {(t["clip"], t["voice"], t["channel"]): t["transcript"] for t in _jsonl(DATA / "transcripts.jsonl")}
+    tr = {(t["clip"], t["voice"], t["channel"], t["asr"]): t["transcript"] for t in _jsonl(DATA / "transcripts.jsonl")}
     # The rules extractor is free, so it runs here on the cached transcripts, never from a cache.
-    rules = [{"clip": c, "voice": v, "channel": ch, "extractor": "rules", "unsure": False,
-              "value": rules_extract(meta[c]["type"], text)} for (c, v, ch), text in tr.items()]
+    rules = [{"clip": c, "voice": v, "channel": ch, "asr": asr, "extractor": "rules", "unsure": False,
+              "value": rules_extract(meta[c]["type"], text)} for (c, v, ch, asr), text in tr.items()]
     out = []
     seen = set()
-    for e in rules + [e for e in _jsonl(DATA / "extractions.jsonl") if e["extractor"] != "rules"]:
-        key = (e["clip"], e["voice"], e["channel"], e["extractor"])
+    # Extractions written before the recogniser comparison have no "asr" field: they are scribe_v1.
+    claude = [{"asr": "scribe_v1", **e} for e in _jsonl(DATA / "extractions.jsonl") if e["extractor"] != "rules"]
+    for e in rules + claude:
+        key = (e["clip"], e["voice"], e["channel"], e["asr"], e["extractor"])
         if key in seen:  # appended twice: keep the first
             continue
         seen.add(key)
         c = meta[e["clip"]]
         out.append({**e, "type": c["type"], "style": c["style"], "truth": c["value"], "version": c["version"],
-                    "transcript": tr.get(key[:3], ""),
+                    "transcript": tr.get(key[:4], ""),
                     "outcome": outcome(c["type"], c["value"], e["value"], e.get("unsure", False))})
     return out
 
@@ -134,7 +136,53 @@ def current(rs: list[dict]) -> list[dict]:
     return [r for r in rs if r["version"] == "v2" or r["type"] not in CHECKSUM]
 
 
-def report(all_rs: list[dict]) -> str:
+ASR_LABELS = {"scribe_v1": "Scribe v1", "scribe_v2": "Scribe v2", "scribe_v2_keyterms": "Scribe v2 + keyterms"}
+
+
+def _asr_table(rs: list[dict], extractors) -> list[str]:
+    """The same recordings through each recogniser, scored on the headline set."""
+    lines = ["| recogniser | extractor | n | correct | re-ask | of which right but unsure | silent wrong (95% CI) |",
+             "|---|---|---|---|---|---|---|"]
+    for asr, label in ASR_LABELS.items():
+        for x in extractors:
+            sub = [r for r in rs if r["asr"] == asr and r["extractor"] == x]
+            n = len(sub)
+            if not n:
+                continue
+            k = {o: sum(r["outcome"] == o for r in sub) for o in OUTCOMES}
+            lo, hi = wilson(k["silent"], n)
+            unsure_right = sum(r["value"] == r["truth"] and bool(r.get("unsure")) for r in sub)
+            lines.append(f"| {label} | {x} | {n} | {k['correct'] / n:.0%} | {k['re-ask'] / n:.0%} | "
+                         f"{unsure_right / n:.0%} | {k['silent'] / n:.1%} ({lo:.1%}–{hi:.1%}) |")
+    return lines
+
+
+def _recogniser_section(every_rs: list[dict], extractors) -> list[str]:
+    """Scribe v1 against Scribe v2, with and without keyterms. Empty until a second recogniser has run."""
+    if len({r["asr"] for r in every_rs}) < 2:
+        return []
+    rs = current(every_rs)
+    lines = ["## Recogniser", "",
+             "The same recordings through Scribe v1, Scribe v2, and Scribe v2 with keyterms (the spelling "
+             "alphabet, the letter names and the field names; never a test value). Same extractors, same "
+             "headline set.", "",
+             *_asr_table(rs, extractors), ""]
+    for style in STYLES:
+        lines += [f"Said {style}:", "", *_asr_table([r for r in rs if r["style"] == style], extractors), ""]
+    wrong = sorted((r for r in rs if r["asr"] != "scribe_v1" and r["value"] is not None and r["value"] != r["truth"]),
+                   key=lambda r: (r["asr"], extractors.index(r["extractor"]), r["type"], r["clip"], r["voice"],
+                                  CHANNELS.index(r["channel"])))
+    lines += ["Wrong values with Scribe v2 (missing values are not listed):", "",
+              "| recogniser | extractor | type | style | channel | voice | true | extracted | caught by |",
+              "|---|---|---|---|---|---|---|---|---|"]
+    lines += [f"| {ASR_LABELS[r['asr']]} | {r['extractor']} | {r['type']} | {r['style']} | {r['channel']} | "
+              f"{r['voice']} | `{r['truth']}` | `{r['value']}` | {caught_by(r)} |" for r in wrong]
+    return lines + [""]
+
+
+def report(every_rs: list[dict]) -> str:
+    # Every section except "Recogniser" uses Scribe v1, the recogniser of the first run.
+    all_rs = [r for r in every_rs if r["asr"] == "scribe_v1"]
     extractors = sorted({r["extractor"] for r in all_rs}, key=lambda x: (x != "rules", x))
     for r in all_rs:
         r["validator"] = "checksum" if r["type"] in CHECKSUM else "format only"
@@ -161,6 +209,7 @@ def report(all_rs: list[dict]) -> str:
            "in every other table; here, for IBANs and fiscal codes, a value that passes the checksum is "
            "accepted anyway.", "",
            *_policy_table(rs, extractors), "",
+           *_recogniser_section(every_rs, extractors),
            "## v1 against v2 long codes", "",
            "v1 IBANs carried ten nines in a row and v1 fiscal codes the place code Y999, to make them "
            "unassignable; v2 uses realistic patterns (a wrong national check letter in the IBAN, a day "

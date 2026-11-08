@@ -12,6 +12,7 @@ that second case, which I call **silent wrong**, through a real speech pipeline.
 
 ```
 32 synthetic values × 2 ways of saying them × 2 voices × 3 channels = 384 recordings (+96 for the v1 comparison)
+each recording through 3 recogniser set-ups: Scribe v1, Scribe v2, Scribe v2 + keyterms
 text ─► ElevenLabs TTS ─► channel ─► ElevenLabs Scribe ─► extractor ─► validator ─► outcome
 ```
 
@@ -33,7 +34,9 @@ text ─► ElevenLabs TTS ─► channel ─► ElevenLabs Scribe ─► extrac
   voice from the public library, both on `eleven_flash_v2_5`. They play the caller.
 - **Channels.** The clean TTS file; a phone line (8 kHz, 300–3400 Hz, G.711 μ-law, via ffmpeg); the
   same line with one mild level of pink noise.
-- **Recognition.** ElevenLabs Scribe (`scribe_v1`, batch, Italian, no keyterms).
+- **Recognition.** ElevenLabs Scribe, batch, Italian. The headline tables use `scribe_v1` without
+  keyterms; the [recogniser comparison](#recogniser) runs the same audio through `scribe_v2`, with
+  and without keyterms.
 - **Extractors.** A deterministic rules normaliser ([`italian.py`](src/spoken_entities/italian.py)) and
   Claude Haiku 5.5 and Opus 5.5 with structured output (one run each, `effort: low`), which may
   return null or mark a value unsure.
@@ -47,7 +50,8 @@ text ─► ElevenLabs TTS ─► channel ─► ElevenLabs Scribe ─► extrac
 ## Results
 
 Full tables, v1 against v2, and every wrong value with what caught it: [docs/results.md](docs/results.md).
-Each extractor saw 384 recordings (v2 IBANs and fiscal codes, the other six types as they are).
+Each extractor saw 384 recordings, all through Scribe v1 (v2 IBANs and fiscal codes, the other six
+types as they are; below, v1 and v2 are the two sets of test values, not the recogniser).
 
 | extractor | right first time | re-ask: right but unsure | re-ask: other | silent wrong |
 |---|---|---|---|---|
@@ -58,8 +62,8 @@ Each extractor saw 384 recordings (v2 IBANs and fiscal codes, the other six type
 0 of 384 is 128 distinct recordings through three channels that mostly agree, so the 95% upper
 bound is about 3%.
 
-- **No wrong value got through.** That is the number that costs money, and it held for every
-  extractor. On synthetic speech it says the mechanism works, not what the rate is on real callers.
+- **No wrong value got through with Scribe v1.** That is the number that costs money, and it held
+  for every extractor; with Scribe v2 it did not quite (see [Recogniser](#recogniser)). On synthetic speech it says the mechanism works, not what the rate is on real callers.
 - **Opus doubts right answers, and the checksum can settle it.** Opus marked 41 of 48 fiscal codes
   unsure, 38 of them right. If a value that passes the checksum is accepted even when marked unsure,
   Opus goes from 86% to 97% right first time and Haiku from 83% to 86%, with no wrong value let
@@ -67,7 +71,7 @@ bound is about 3%.
   codes Opus went from 50 to 90 of 96. On this set only: a fiscal code's check letter accepts about
   1 in 26 random corruptions, an IBAN's mod-97 about 1 in 97, so the overlap between the extractor's
   doubt and the validator should be designed, not assumed.
-- **When the checksum mattered, it mattered a lot.** On v2, the rules normaliser and Opus produced no
+- **When the checksum mattered, it mattered a lot.** On the v2 values, the rules normaliser and Opus produced no
   wrong IBAN or fiscal code. Haiku produced four, and two of them were sure and well formed: "K come
   kappa" came back from the recogniser as a nonsense word starting with C, Haiku wrote C, and mod-97
   rejected the IBAN. With only a format check, the agent would have acted on both.
@@ -82,6 +86,53 @@ bound is about 3%.
 - **The phone line did not separate anything.** Right first time moved by at most five points
   between channels, in no consistent direction. Synthetic voices are clear and steady, the noise
   was mild, and a real caller is neither.
+
+## Recogniser
+
+The same 384 recordings through Scribe v2, once plain and once with 42
+[keyterms](https://elevenlabs.io/docs/eleven-api/guides/how-to/speech-to-text/batch/keyterm-prompting): the spelling-alphabet words, the Italian letter names of three letters or
+more (effe, erre, zeta...) and the field names ("codice fiscale", "IBAN"...). Never a test value:
+keyterms tell the recogniser what kind of words to expect, not what the answer is. They add about
+a fifth to the price of recognition ($0.05 on $0.22 an hour at the
+[API list price](https://elevenlabs.io/pricing/api), November 2026).
+
+| extractor | Scribe v1 | Scribe v2 | Scribe v2 + keyterms |
+|---|---|---|---|
+| rules | 97% · 0 silent | 95% · 2 silent | 98% · 0 silent |
+| Claude Haiku 5.5 | 83% · 0 | 84% · 1 | 84% · 1 |
+| Claude Opus 5.5 | 86% · 0 | 86% · 1 | 86% · 0 |
+
+Right first time and silent wrongs, n = 384 per cell. Full tables in
+[docs/results.md](docs/results.md#recogniser).
+
+- **Changing the recogniser moved accuracy by a few points, within the noise.** The extractors
+  differ from each other far more than the recognisers do.
+- **The zero did not carry over, and the misses landed where there is no checksum.** Five silent
+  wrongs across the 2,304 Scribe v2 extractions, from three recordings, all on delegation codes and
+  PODs, which only have a format check. None on IBANs or fiscal codes. This is not evidence that
+  Scribe v2 is worse (0 in 1,152 against 5 in 2,304 is within chance); it is evidence that a zero
+  measured on one recogniser does not transfer to another, so the check has to re-run on every
+  recogniser change.
+- **Across all nine set-ups, the checksum held.** 9 wrong IBANs and fiscal codes, none acted on;
+  on the format-only codes, 5 of 8 wrong values got through. Accepting a checksum-valid value
+  despite the unsure flag replicated on both Scribe v2 set-ups (Opus 96–97%, Haiku 86–87% right
+  first time) and never accepted a wrong value.
+- **One recogniser error got past every extractor.** For `DLG-GEDP` on the clean channel, Scribe
+  v2 wrote "DLGDEDP": a G heard as D, the length kept. Rules, Haiku and Opus all returned
+  `DLG-DEDP`, sure of it. Scribe v1 and Scribe v2 with keyterms dropped a letter on the same
+  audio instead ("di LGEDP"): every extractor returned nothing or marked it unsure, and the
+  agent would have asked again. An error that keeps the format is the one only a read-back or a checksum can catch.
+- **Not every silent wrong is the recogniser's.** With keyterms, Haiku turned a correctly
+  transcribed POD ("cinque-sei-cinque...") into `...65599395`, swapping two digits, and was sure.
+  And the rules normaliser turned a transcript with one extra letter ("DLGI di 3DQ") into
+  `DLG-ID3D` by keeping the first four symbols; it should have rejected the surplus. Not fixed, so
+  that the numbers above stay the ones the parser produced before seeing Scribe v2.
+- **Keyterms changed how Scribe writes spelling, and that broke my parser.** With keyterms,
+  23 transcripts wrote the letter by name before "come" ("effe come Firenze"), which the rules
+  normaliser read as two letters. On that set-up it scored 92% right first time until I added
+  that pattern, and 98% after; Scribe v1 stays at 97% either way. The fix came from one clip of this condition, so the 98% is not held-out;
+  the Scribe v1 results are unchanged by it. A normaliser written against one recogniser's output
+  is part of what a recogniser change tests.
 
 ## How this relates to τ-Entity
 
@@ -99,9 +150,10 @@ extraction pass and what the validator does with it, no repair over turns.
 - **The unassignable fields are invisible to my validators.** A v2 IBAN has a wrong CIN and a v2 fiscal code an
   impossible day; a production validator that also checks those would reject my test values before
   the checksum. I use only mod-97 and the check letter.
-- **Synthesis and recognition errors are not separated.** On v1 a transcript reading "I come
-  ipsilon" suggests the TTS read Y as "i". I have not listened to every failing clip or run a second
-  recogniser.
+- **Synthesis and recognition errors are only partly separated.** On v1 a transcript reading "I come
+  ipsilon" suggests the TTS read Y as "i". Where two Scribe versions disagree on the same audio
+  the error is the recogniser's, but both are ElevenLabs models, and I have not listened to every
+  failing clip.
 - **Small, correlated cells.** Each type has 16 distinct recordings (8 texts × 2 voices), and the
   three channels gave the same outcome for most of them. A 0 in one type means under about 1 in 5.
   The Wilson intervals in docs/results.md assume independence and are too narrow.
@@ -110,15 +162,17 @@ extraction pass and what the validator does with it, no repair over turns.
   read "doppia vu" as V; with those bugs it let two wrong values through. v2's IBANs and fiscal codes
   came later and act as a small held-out check (91% right, no wrong value), but the other six types
   were scored on the same transcripts it was fixed on. The Claude prompt was written once and not changed.
-- **One recogniser, one run, batch.** Scribe v1 without keyterms, not the streaming recogniser a
-  live agent uses; each Claude extraction ran once at `effort: low`.
+- **One vendor, one run, batch.** Three Scribe set-ups from one vendor, none of them the streaming
+  recogniser a live agent uses; each recognition and each Claude extraction (at `effort: low`)
+  ran once, so a difference of one or two values between set-ups is not a finding.
 - **Amounts, dates and readings have no checksum**, so for them a misheard value that keeps its
   format can only be caught by reading it back to the caller. In this set every one was recovered.
 
 ## Next
 
-- Scribe v2 Realtime with the spelling-alphabet words as
-  [keyterms](https://elevenlabs.io/blog/introducing-scribe-v2), and a second recogniser.
+- The streaming recogniser a live agent would use (Scribe v2 Realtime; the 42 keyterms fit its
+  limits unchanged) and a recogniser from a second vendor, on the same audio.
+- Make the rules normaliser reject surplus symbols instead of keeping the first ones.
 - Harder channels (lower SNR, a narrowband mobile codec) and consented human recordings, with the
   failing clips committed so they can be heard.
 - Repair, not just re-ask: re-asking the same audio repeats the same error, so switch how the
@@ -141,6 +195,9 @@ Regenerating the data needs `ELEVENLABS_API_KEY` and `ANTHROPIC_API_KEY` (enviro
 uv run python -m spoken_entities.pipeline tts      # about 18,700 characters, audio/ (not committed)
 uv run python -m spoken_entities.pipeline asr      # 480 Scribe calls -> data/transcripts.jsonl
 uv run python -m spoken_entities.pipeline extract  # 960 Claude calls -> data/extractions.jsonl
+# the recogniser comparison: the same two steps per set-up (also with --asr scribe_v2)
+uv run python -m spoken_entities.pipeline asr --asr scribe_v2_keyterms
+uv run python -m spoken_entities.pipeline extract --asr scribe_v2_keyterms
 ```
 
 Every stage is cached and appends only what is missing. Transcripts and Claude extractions are
