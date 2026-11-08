@@ -136,6 +136,10 @@ class Entity:
     id: str
     type: str
     value: str
+    # "v1": the first IBANs and fiscal codes, unassignable through artificial patterns (ten nines in
+    # a row, place code Y999) that turned out to drive most recognition errors. "v2": realistic
+    # patterns, unassignable through a field no real code can have. Other types are the same in both.
+    version: str = "v1"
 
 
 def _iban(rng: random.Random) -> str:
@@ -158,6 +162,39 @@ def _cf(rng: random.Random) -> str:
     return body + cf_check_letter(body)
 
 
+def italian_cin(abi_cab_account: str) -> str:
+    """The national check letter of an Italian BBAN (ABI + CAB + account). It uses the same odd/even
+    tables as the fiscal code's check letter."""
+    return cf_check_letter(abi_cab_account)
+
+
+def _iban_v2(rng: random.Random) -> str:
+    """Realistic digits, but a CIN that is deliberately wrong: the IBAN check digits (mod-97) are
+    valid, the national check letter is not, so no bank can have issued it."""
+    rest = f"0{rng.randrange(10**4):04d}{rng.randrange(10**5):05d}{rng.randrange(10**12):012d}"
+    right = italian_cin(rest)
+    cin = chr(65 + (ord(right) - 65 + rng.randrange(1, 26)) % 26)
+    bban = cin + rest
+    for check in range(100):
+        cand = f"IT{check:02d}{bban}"
+        if iban_ok(cand):
+            return cand
+    raise AssertionError("no IBAN check digits")
+
+
+# Real place codes of large municipalities: Roma, Milano, Napoli, Torino, Palermo, Bologna, Firenze, Bari.
+PLACES = ["H501", "F205", "F839", "L219", "G273", "A944", "D612", "A662"]
+
+
+def _cf_v2(rng: random.Random) -> str:
+    """A real place code, but a day of birth of 32-40: no one is born on day 32-40 (women are
+    41-71), so the code cannot belong to anyone. The check letter is computed as usual."""
+    letters = "BCDFGLMNPRSTVZ"
+    head = "".join(rng.choice(letters) for _ in range(6))
+    body = f"{head}{rng.randrange(40, 99):02d}{rng.choice('ABCDEHLMPRST')}{rng.randrange(32, 41):02d}{rng.choice(PLACES)}"
+    return body + cf_check_letter(body)
+
+
 def build_set(per_type: int = 4, seed: int = 7) -> list[Entity]:
     rng = random.Random(seed)
     alnum = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"  # no I/O/0/1 in delegation codes
@@ -175,6 +212,10 @@ def build_set(per_type: int = 4, seed: int = 7) -> list[Entity]:
             Entity(f"iban-{n}", "iban", _iban(rng)),
             Entity(f"fiscal_code-{n}", "fiscal_code", _cf(rng)),
         ]
+    rng2 = random.Random(seed + 1)  # a separate stream, so the v1 values above never change
+    for i in range(per_type):
+        out += [Entity(f"iban-r{i + 1}", "iban", _iban_v2(rng2), "v2"),
+                Entity(f"fiscal_code-r{i + 1}", "fiscal_code", _cf_v2(rng2), "v2")]
     for e in out:
         assert VALIDATORS[e.type](e.value), e
     return out

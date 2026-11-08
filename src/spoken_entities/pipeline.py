@@ -59,7 +59,7 @@ def _key(name: str, file: str) -> str:
 
 def clips() -> list[dict[str, str]]:
     return [{"clip": f"{e.id}.{s}", "entity": e.id, "type": e.type, "value": e.value, "style": s,
-             "text": clip_text(e.type, e.value, s)} for e in build_set() for s in STYLES]
+             "version": e.version, "text": clip_text(e.type, e.value, s)} for e in build_set() for s in STYLES]
 
 
 # --- TTS ----------------------------------------------------------------------------
@@ -110,6 +110,8 @@ def run_tts() -> None:
             return None
         except urllib.error.HTTPError as e:
             return f"{v}/{c['clip']}: {e.code} {e.read()[:200]!r}"
+        except Exception as e:  # network or timeout: retried on the next run
+            return f"{v}/{c['clip']}: {type(e).__name__} {str(e)[:200]}"
 
     with ThreadPoolExecutor(4) as pool:
         errors = [e for e in pool.map(one, jobs) if e]

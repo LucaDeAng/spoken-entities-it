@@ -9,15 +9,15 @@ Do not edit by hand.
 
 | channel | extractor | n | correct | re-ask | of which right but unsure | silent wrong (95% CI) |
 |---|---|---|---|---|---|---|
-| clean | rules | 128 | 88% | 12% | 0% | 0.0% (0.0%–2.9%) |
-| clean | claude-haiku-5-5 | 128 | 75% | 25% | 6% | 0.0% (0.0%–2.9%) |
-| clean | claude-opus-5-5 | 128 | 80% | 20% | 8% | 0.0% (0.0%–2.9%) |
-| phone | rules | 128 | 87% | 13% | 0% | 0.0% (0.0%–2.9%) |
-| phone | claude-haiku-5-5 | 128 | 75% | 25% | 5% | 0.0% (0.0%–2.9%) |
-| phone | claude-opus-5-5 | 128 | 79% | 21% | 9% | 0.0% (0.0%–2.9%) |
-| phone_noise | rules | 128 | 86% | 14% | 0% | 0.0% (0.0%–2.9%) |
-| phone_noise | claude-haiku-5-5 | 128 | 76% | 24% | 5% | 0.0% (0.0%–2.9%) |
-| phone_noise | claude-opus-5-5 | 128 | 77% | 23% | 10% | 0.0% (0.0%–2.9%) |
+| clean | rules | 128 | 97% | 3% | 0% | 0.0% (0.0%–2.9%) |
+| clean | claude-haiku-5-5 | 128 | 85% | 15% | 4% | 0.0% (0.0%–2.9%) |
+| clean | claude-opus-5-5 | 128 | 86% | 14% | 11% | 0.0% (0.0%–2.9%) |
+| phone | rules | 128 | 97% | 3% | 0% | 0.0% (0.0%–2.9%) |
+| phone | claude-haiku-5-5 | 128 | 80% | 20% | 8% | 0.0% (0.0%–2.9%) |
+| phone | claude-opus-5-5 | 128 | 88% | 12% | 9% | 0.0% (0.0%–2.9%) |
+| phone_noise | rules | 128 | 97% | 3% | 0% | 0.0% (0.0%–2.9%) |
+| phone_noise | claude-haiku-5-5 | 128 | 84% | 16% | 5% | 0.0% (0.0%–2.9%) |
+| phone_noise | claude-opus-5-5 | 128 | 84% | 16% | 15% | 0.0% (0.0%–2.9%) |
 
 ## By validator
 
@@ -25,9 +25,9 @@ A checksum (IBAN, codice fiscale) rejects most wrong values, so they become re-a
 
 | validator | extractor | n | correct | re-ask | of which right but unsure | silent wrong (95% CI) |
 |---|---|---|---|---|---|---|
-| checksum | rules | 96 | 50% | 50% | 0% | 0.0% (0.0%–3.8%) |
-| checksum | claude-haiku-5-5 | 96 | 46% | 54% | 10% | 0.0% (0.0%–3.8%) |
-| checksum | claude-opus-5-5 | 96 | 21% | 79% | 30% | 0.0% (0.0%–3.8%) |
+| checksum | rules | 96 | 91% | 9% | 0% | 0.0% (0.0%–3.8%) |
+| checksum | claude-haiku-5-5 | 96 | 78% | 22% | 11% | 0.0% (0.0%–3.8%) |
+| checksum | claude-opus-5-5 | 96 | 52% | 48% | 42% | 0.0% (0.0%–3.8%) |
 | format only | rules | 288 | 99% | 1% | 0% | 0.0% (0.0%–1.3%) |
 | format only | claude-haiku-5-5 | 288 | 85% | 15% | 3% | 0.0% (0.0%–1.3%) |
 | format only | claude-opus-5-5 | 288 | 98% | 2% | 2% | 0.0% (0.0%–1.3%) |
@@ -38,9 +38,9 @@ The same IBANs and fiscal codes, if the only check were the format: how many wro
 
 | extractor | n | wrong values | wrong, sure and format-valid: acted on without the checksum (95% CI) | caught by the checksum |
 |---|---|---|---|---|
-| rules | 96 | 20 | 20 = 21% (14%–30%) | 20 |
-| claude-haiku-5-5 | 96 | 12 | 1 = 1% (0%–6%) | 1 |
-| claude-opus-5-5 | 96 | 8 | 0 = 0% (0%–4%) | 0 |
+| rules | 96 | 0 | 0 = 0% (0%–4%) | 0 |
+| claude-haiku-5-5 | 96 | 4 | 2 = 2% (1%–7%) | 2 |
+| claude-opus-5-5 | 96 | 0 | 0 = 0% (0%–4%) | 0 |
 
 ## Letting the checksum overrule 'unsure'
 
@@ -48,23 +48,44 @@ Counts over all 384 recordings per extractor. A value marked unsure is a re-ask 
 
 | extractor | policy | correct | re-ask | silent wrong |
 |---|---|---|---|---|
-| rules | the extractor's flag decides | 333 | 51 | 0 |
-| rules | the checksum overrules 'unsure' | 333 | 51 | 0 |
-| claude-haiku-5-5 | the extractor's flag decides | 289 | 95 | 0 |
-| claude-haiku-5-5 | the checksum overrules 'unsure' | 299 | 85 | 0 |
-| claude-opus-5-5 | the extractor's flag decides | 301 | 83 | 0 |
-| claude-opus-5-5 | the checksum overrules 'unsure' | 330 | 54 | 0 |
+| rules | the extractor's flag decides | 372 | 12 | 0 |
+| rules | the checksum overrules 'unsure' | 372 | 12 | 0 |
+| claude-haiku-5-5 | the extractor's flag decides | 320 | 64 | 0 |
+| claude-haiku-5-5 | the checksum overrules 'unsure' | 331 | 53 | 0 |
+| claude-opus-5-5 | the extractor's flag decides | 331 | 53 | 0 |
+| claude-opus-5-5 | the checksum overrules 'unsure' | 371 | 13 | 0 |
+
+## v1 against v2 long codes
+
+v1 IBANs carried ten nines in a row and v1 fiscal codes the place code Y999, to make them unassignable; v2 uses realistic patterns (a wrong national check letter in the IBAN, a day of birth of 32-40 in the fiscal code). Every other table uses v2.
+
+| version | extractor | n | correct | re-ask | of which right but unsure | silent wrong (95% CI) |
+|---|---|---|---|---|---|---|
+| v1 | rules | 96 | 50% | 50% | 0% | 0.0% (0.0%–3.8%) |
+| v1 | claude-haiku-5-5 | 96 | 46% | 54% | 10% | 0.0% (0.0%–3.8%) |
+| v1 | claude-opus-5-5 | 96 | 21% | 79% | 30% | 0.0% (0.0%–3.8%) |
+| v2 | rules | 96 | 91% | 9% | 0% | 0.0% (0.0%–3.8%) |
+| v2 | claude-haiku-5-5 | 96 | 78% | 22% | 11% | 0.0% (0.0%–3.8%) |
+| v2 | claude-opus-5-5 | 96 | 52% | 48% | 42% | 0.0% (0.0%–3.8%) |
+
+Without the checksum, v1:
+
+| extractor | n | wrong values | wrong, sure and format-valid: acted on without the checksum (95% CI) | caught by the checksum |
+|---|---|---|---|---|
+| rules | 96 | 20 | 20 = 21% (14%–30%) | 20 |
+| claude-haiku-5-5 | 96 | 12 | 1 = 1% (0%–6%) | 1 |
+| claude-opus-5-5 | 96 | 8 | 0 = 0% (0%–4%) | 0 |
 
 ## By how the caller said it
 
 | style | extractor | n | correct | re-ask | of which right but unsure | silent wrong (95% CI) |
 |---|---|---|---|---|---|---|
-| natural | rules | 192 | 86% | 14% | 0% | 0.0% (0.0%–2.0%) |
-| natural | claude-haiku-5-5 | 192 | 80% | 20% | 2% | 0.0% (0.0%–2.0%) |
-| natural | claude-opus-5-5 | 192 | 74% | 26% | 12% | 0.0% (0.0%–2.0%) |
-| spelled | rules | 192 | 87% | 13% | 0% | 0.0% (0.0%–2.0%) |
-| spelled | claude-haiku-5-5 | 192 | 71% | 29% | 8% | 0.0% (0.0%–2.0%) |
-| spelled | claude-opus-5-5 | 192 | 83% | 17% | 5% | 0.0% (0.0%–2.0%) |
+| natural | rules | 192 | 97% | 3% | 0% | 0.0% (0.0%–2.0%) |
+| natural | claude-haiku-5-5 | 192 | 88% | 12% | 4% | 0.0% (0.0%–2.0%) |
+| natural | claude-opus-5-5 | 192 | 84% | 16% | 14% | 0.0% (0.0%–2.0%) |
+| spelled | rules | 192 | 97% | 3% | 0% | 0.0% (0.0%–2.0%) |
+| spelled | claude-haiku-5-5 | 192 | 79% | 21% | 7% | 0.0% (0.0%–2.0%) |
+| spelled | claude-opus-5-5 | 192 | 89% | 11% | 10% | 0.0% (0.0%–2.0%) |
 
 ## By entity type
 
@@ -82,12 +103,12 @@ Counts over all 384 recordings per extractor. A value marked unsure is a re-ask 
 | delegation_ref | rules | 48 | 96% | 4% | 0% | 0.0% (0.0%–7.4%) |
 | delegation_ref | claude-haiku-5-5 | 48 | 23% | 77% | 12% | 0.0% (0.0%–7.4%) |
 | delegation_ref | claude-opus-5-5 | 48 | 85% | 15% | 10% | 0.0% (0.0%–7.4%) |
-| fiscal_code | rules | 48 | 58% | 42% | 0% | 0.0% (0.0%–7.4%) |
-| fiscal_code | claude-haiku-5-5 | 48 | 58% | 42% | 8% | 0.0% (0.0%–7.4%) |
-| fiscal_code | claude-opus-5-5 | 48 | 10% | 90% | 54% | 0.0% (0.0%–7.4%) |
-| iban | rules | 48 | 42% | 58% | 0% | 0.0% (0.0%–7.4%) |
-| iban | claude-haiku-5-5 | 48 | 33% | 67% | 12% | 0.0% (0.0%–7.4%) |
-| iban | claude-opus-5-5 | 48 | 31% | 69% | 6% | 0.0% (0.0%–7.4%) |
+| fiscal_code | rules | 48 | 92% | 8% | 0% | 0.0% (0.0%–7.4%) |
+| fiscal_code | claude-haiku-5-5 | 48 | 69% | 31% | 23% | 0.0% (0.0%–7.4%) |
+| fiscal_code | claude-opus-5-5 | 48 | 15% | 85% | 79% | 0.0% (0.0%–7.4%) |
+| iban | rules | 48 | 90% | 10% | 0% | 0.0% (0.0%–7.4%) |
+| iban | claude-haiku-5-5 | 48 | 88% | 12% | 0% | 0.0% (0.0%–7.4%) |
+| iban | claude-opus-5-5 | 48 | 90% | 10% | 4% | 0.0% (0.0%–7.4%) |
 | meter_reading | rules | 48 | 100% | 0% | 0% | 0.0% (0.0%–7.4%) |
 | meter_reading | claude-haiku-5-5 | 48 | 100% | 0% | 0% | 0.0% (0.0%–7.4%) |
 | meter_reading | claude-opus-5-5 | 48 | 100% | 0% | 0% | 0.0% (0.0%–7.4%) |
@@ -99,46 +120,50 @@ Counts over all 384 recordings per extractor. A value marked unsure is a re-ask 
 
 Values that came out and were wrong (missing values are not listed). A silent wrong value would show NOTHING in the last column.
 
-| extractor | type | style | channel | voice | true | extracted | caught by |
-|---|---|---|---|---|---|---|---|
-| rules | fiscal_code | natural | phone_noise | native-m | `MMCFCP67A27Y999V` | `MCEFCP67A27Y999V` | checksum |
-| rules | fiscal_code | spelled | phone | default-f | `MMCFCP67A27Y999V` | `MMCFCP67A27X999V` | checksum |
-| rules | fiscal_code | spelled | phone_noise | default-f | `MMCFCP67A27Y999V` | `MMCFCP67A27X999V` | checksum |
-| rules | fiscal_code | spelled | clean | native-m | `MMCFCP67A27Y999V` | `MMCFCP67A27I999V` | checksum |
-| rules | fiscal_code | spelled | phone | native-m | `MMCFCP67A27Y999V` | `MMCFCP67A27I999V` | checksum |
-| rules | fiscal_code | spelled | phone_noise | native-m | `MMCFCP67A27Y999V` | `MMCFCP67A27I999V` | checksum |
-| rules | fiscal_code | spelled | clean | default-f | `GPZSDC77R21Y999H` | `GPZSDC77R21X999H` | checksum |
-| rules | fiscal_code | spelled | phone | default-f | `GPZSDC77R21Y999H` | `GPZSDC77R21X999H` | checksum |
-| rules | fiscal_code | spelled | phone_noise | default-f | `GPZSDC77R21Y999H` | `GPZSDC77R21X999H` | checksum |
-| rules | fiscal_code | spelled | phone_noise | default-f | `FVDTVF45R50Y999W` | `FVDTVF45R50X999W` | checksum |
-| rules | fiscal_code | spelled | clean | native-m | `FVDTVF45R50Y999W` | `FVDTVF45R50X999W` | checksum |
-| rules | fiscal_code | spelled | clean | default-f | `CVPRVZ60H63Y999T` | `CVPRVZ60H63I999T` | checksum |
-| rules | fiscal_code | spelled | clean | native-m | `CVPRVZ60H63Y999T` | `CVPRVZ60H63I999T` | checksum |
-| rules | fiscal_code | spelled | phone | native-m | `CVPRVZ60H63Y999T` | `CVPRVZ60H63I999T` | checksum |
-| rules | fiscal_code | spelled | phone_noise | native-m | `CVPRVZ60H63Y999T` | `CVPRVZ60H63I999T` | checksum |
-| rules | iban | spelled | phone | native-m | `IT63G9999999999094650323160` | `IT63G9999999999909465032316` | checksum |
-| rules | iban | spelled | phone | native-m | `IT49O9999999999327970498904` | `IT49O9999999999932797049890` | checksum |
-| rules | iban | spelled | clean | native-m | `IT91B9999999999738571248116` | `IT91B9999999999973857124811` | checksum |
-| rules | iban | spelled | phone | native-m | `IT91B9999999999738571248116` | `IT91B9999999999973857124811` | checksum |
-| rules | iban | spelled | phone_noise | native-m | `IT91B9999999999738571248116` | `IT91B9999999999973857124811` | checksum |
-| claude-haiku-5-5 | amount | spelled | phone | default-f | `97,62` | `97,20` | unsure flag |
-| claude-haiku-5-5 | fiscal_code | spelled | phone | default-f | `MMCFCP67A27Y999V` | `MMCFCP67A27X999V` | unsure flag |
-| claude-haiku-5-5 | fiscal_code | spelled | phone_noise | default-f | `MMCFCP67A27Y999V` | `MMCFCP67A27X999V` | unsure flag |
-| claude-haiku-5-5 | fiscal_code | spelled | clean | native-m | `MMCFCP67A27Y999V` | `MMCFCP67A27I999V` | unsure flag |
-| claude-haiku-5-5 | fiscal_code | spelled | phone | native-m | `MMCFCP67A27Y999V` | `MMCFCP67A27I999V` | unsure flag |
-| claude-haiku-5-5 | fiscal_code | spelled | phone | default-f | `GPZSDC77R21Y999H` | `GPZSDC77R21X999H` | unsure flag |
-| claude-haiku-5-5 | fiscal_code | spelled | phone_noise | default-f | `FVDTVF45R50Y999W` | `FVDTVF45R50X999W` | unsure flag |
-| claude-haiku-5-5 | fiscal_code | spelled | clean | native-m | `FVDTVF45R50Y999W` | `FVDTVF45R50X999W` | unsure flag |
-| claude-haiku-5-5 | fiscal_code | spelled | clean | native-m | `CVPRVZ60H63Y999T` | `CVPRVZ60H63I999T` | checksum |
-| claude-haiku-5-5 | fiscal_code | spelled | phone_noise | native-m | `CVPRVZ60H63Y999T` | `CVPRVZ60H63I999T` | unsure flag |
-| claude-haiku-5-5 | iban | natural | phone_noise | native-m | `IT63G9999999999094650323160` | `IT63G99999999094650323160` | unsure flag |
-| claude-haiku-5-5 | iban | natural | clean | default-f | `IT91B9999999999738571248116` | `IT91B99999999738571248116` | unsure flag |
-| claude-haiku-5-5 | iban | natural | phone_noise | native-m | `IT91B9999999999738571248116` | `IT91B99999999738571248116` | unsure flag |
-| claude-opus-5-5 | fiscal_code | spelled | phone | native-m | `MMCFCP67A27Y999V` | `MMCFCP67A27I999V` | unsure flag |
-| claude-opus-5-5 | fiscal_code | spelled | phone_noise | native-m | `MMCFCP67A27Y999V` | `MMCFCP67A27I999V` | unsure flag |
-| claude-opus-5-5 | fiscal_code | spelled | clean | default-f | `CVPRVZ60H63Y999T` | `CVPRVZ60H63I999T` | unsure flag |
-| claude-opus-5-5 | fiscal_code | spelled | clean | native-m | `CVPRVZ60H63Y999T` | `CVPRVZ60H63I999T` | unsure flag |
-| claude-opus-5-5 | fiscal_code | spelled | phone | native-m | `CVPRVZ60H63Y999T` | `CVPRVZ60H63I999T` | unsure flag |
-| claude-opus-5-5 | fiscal_code | spelled | phone_noise | native-m | `CVPRVZ60H63Y999T` | `CVPRVZ60H63I999T` | unsure flag |
-| claude-opus-5-5 | iban | spelled | clean | default-f | `IT63G9999999999094650323160` | `IT63G9999999999090465032160` | unsure flag |
-| claude-opus-5-5 | iban | spelled | phone_noise | default-f | `IT63G9999999999094650323160` | `IT63G9999999999090465032160` | unsure flag |
+| extractor | type | values | style | channel | voice | true | extracted | caught by |
+|---|---|---|---|---|---|---|---|---|
+| rules | fiscal_code | v1 | natural | phone_noise | native-m | `MMCFCP67A27Y999V` | `MCEFCP67A27Y999V` | checksum |
+| rules | fiscal_code | v1 | spelled | phone | default-f | `MMCFCP67A27Y999V` | `MMCFCP67A27X999V` | checksum |
+| rules | fiscal_code | v1 | spelled | phone_noise | default-f | `MMCFCP67A27Y999V` | `MMCFCP67A27X999V` | checksum |
+| rules | fiscal_code | v1 | spelled | clean | native-m | `MMCFCP67A27Y999V` | `MMCFCP67A27I999V` | checksum |
+| rules | fiscal_code | v1 | spelled | phone | native-m | `MMCFCP67A27Y999V` | `MMCFCP67A27I999V` | checksum |
+| rules | fiscal_code | v1 | spelled | phone_noise | native-m | `MMCFCP67A27Y999V` | `MMCFCP67A27I999V` | checksum |
+| rules | fiscal_code | v1 | spelled | clean | default-f | `GPZSDC77R21Y999H` | `GPZSDC77R21X999H` | checksum |
+| rules | fiscal_code | v1 | spelled | phone | default-f | `GPZSDC77R21Y999H` | `GPZSDC77R21X999H` | checksum |
+| rules | fiscal_code | v1 | spelled | phone_noise | default-f | `GPZSDC77R21Y999H` | `GPZSDC77R21X999H` | checksum |
+| rules | fiscal_code | v1 | spelled | phone_noise | default-f | `FVDTVF45R50Y999W` | `FVDTVF45R50X999W` | checksum |
+| rules | fiscal_code | v1 | spelled | clean | native-m | `FVDTVF45R50Y999W` | `FVDTVF45R50X999W` | checksum |
+| rules | fiscal_code | v1 | spelled | clean | default-f | `CVPRVZ60H63Y999T` | `CVPRVZ60H63I999T` | checksum |
+| rules | fiscal_code | v1 | spelled | clean | native-m | `CVPRVZ60H63Y999T` | `CVPRVZ60H63I999T` | checksum |
+| rules | fiscal_code | v1 | spelled | phone | native-m | `CVPRVZ60H63Y999T` | `CVPRVZ60H63I999T` | checksum |
+| rules | fiscal_code | v1 | spelled | phone_noise | native-m | `CVPRVZ60H63Y999T` | `CVPRVZ60H63I999T` | checksum |
+| rules | iban | v1 | spelled | phone | native-m | `IT63G9999999999094650323160` | `IT63G9999999999909465032316` | checksum |
+| rules | iban | v1 | spelled | phone | native-m | `IT49O9999999999327970498904` | `IT49O9999999999932797049890` | checksum |
+| rules | iban | v1 | spelled | clean | native-m | `IT91B9999999999738571248116` | `IT91B9999999999973857124811` | checksum |
+| rules | iban | v1 | spelled | phone | native-m | `IT91B9999999999738571248116` | `IT91B9999999999973857124811` | checksum |
+| rules | iban | v1 | spelled | phone_noise | native-m | `IT91B9999999999738571248116` | `IT91B9999999999973857124811` | checksum |
+| claude-haiku-5-5 | amount | v1 | spelled | phone | default-f | `97,62` | `97,20` | unsure flag |
+| claude-haiku-5-5 | fiscal_code | v1 | spelled | phone | default-f | `MMCFCP67A27Y999V` | `MMCFCP67A27X999V` | unsure flag |
+| claude-haiku-5-5 | fiscal_code | v1 | spelled | phone_noise | default-f | `MMCFCP67A27Y999V` | `MMCFCP67A27X999V` | unsure flag |
+| claude-haiku-5-5 | fiscal_code | v1 | spelled | clean | native-m | `MMCFCP67A27Y999V` | `MMCFCP67A27I999V` | unsure flag |
+| claude-haiku-5-5 | fiscal_code | v1 | spelled | phone | native-m | `MMCFCP67A27Y999V` | `MMCFCP67A27I999V` | unsure flag |
+| claude-haiku-5-5 | fiscal_code | v1 | spelled | phone | default-f | `GPZSDC77R21Y999H` | `GPZSDC77R21X999H` | unsure flag |
+| claude-haiku-5-5 | fiscal_code | v1 | spelled | phone_noise | default-f | `FVDTVF45R50Y999W` | `FVDTVF45R50X999W` | unsure flag |
+| claude-haiku-5-5 | fiscal_code | v1 | spelled | clean | native-m | `FVDTVF45R50Y999W` | `FVDTVF45R50X999W` | unsure flag |
+| claude-haiku-5-5 | fiscal_code | v1 | spelled | clean | native-m | `CVPRVZ60H63Y999T` | `CVPRVZ60H63I999T` | checksum |
+| claude-haiku-5-5 | fiscal_code | v1 | spelled | phone_noise | native-m | `CVPRVZ60H63Y999T` | `CVPRVZ60H63I999T` | unsure flag |
+| claude-haiku-5-5 | fiscal_code | v2 | natural | clean | native-m | `NSPFRV49R33H501B` | `NSPFRV4R33H501B` | unsure flag |
+| claude-haiku-5-5 | iban | v1 | natural | phone_noise | native-m | `IT63G9999999999094650323160` | `IT63G99999999094650323160` | unsure flag |
+| claude-haiku-5-5 | iban | v1 | natural | clean | default-f | `IT91B9999999999738571248116` | `IT91B99999999738571248116` | unsure flag |
+| claude-haiku-5-5 | iban | v1 | natural | phone_noise | native-m | `IT91B9999999999738571248116` | `IT91B99999999738571248116` | unsure flag |
+| claude-haiku-5-5 | iban | v2 | spelled | phone | default-f | `IT75K0049660179500309582313` | `IT75C0049660179500309582313` | checksum |
+| claude-haiku-5-5 | iban | v2 | spelled | phone_noise | default-f | `IT75K0049660179500309582313` | `IT75C0049660179500309582313` | checksum |
+| claude-haiku-5-5 | iban | v2 | spelled | phone | default-f | `IT20M0095144359756921066855` | `IT20M00951443549756921066855` | checksum |
+| claude-opus-5-5 | fiscal_code | v1 | spelled | phone | native-m | `MMCFCP67A27Y999V` | `MMCFCP67A27I999V` | unsure flag |
+| claude-opus-5-5 | fiscal_code | v1 | spelled | phone_noise | native-m | `MMCFCP67A27Y999V` | `MMCFCP67A27I999V` | unsure flag |
+| claude-opus-5-5 | fiscal_code | v1 | spelled | clean | default-f | `CVPRVZ60H63Y999T` | `CVPRVZ60H63I999T` | unsure flag |
+| claude-opus-5-5 | fiscal_code | v1 | spelled | clean | native-m | `CVPRVZ60H63Y999T` | `CVPRVZ60H63I999T` | unsure flag |
+| claude-opus-5-5 | fiscal_code | v1 | spelled | phone | native-m | `CVPRVZ60H63Y999T` | `CVPRVZ60H63I999T` | unsure flag |
+| claude-opus-5-5 | fiscal_code | v1 | spelled | phone_noise | native-m | `CVPRVZ60H63Y999T` | `CVPRVZ60H63I999T` | unsure flag |
+| claude-opus-5-5 | iban | v1 | spelled | clean | default-f | `IT63G9999999999094650323160` | `IT63G9999999999090465032160` | unsure flag |
+| claude-opus-5-5 | iban | v1 | spelled | phone_noise | default-f | `IT63G9999999999094650323160` | `IT63G9999999999090465032160` | unsure flag |

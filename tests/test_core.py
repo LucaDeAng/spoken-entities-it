@@ -2,11 +2,13 @@ import pytest
 
 from spoken_entities.entities import (
     CHECKSUM,
+    PLACES,
     VALIDATORS,
     build_set,
     cf_ok,
     clip_text,
     iban_ok,
+    italian_cin,
 )
 from spoken_entities.italian import number_words, parse_number_word, to_symbols
 from spoken_entities.pipeline import rules_extract
@@ -26,15 +28,19 @@ def test_number_words_elision(n, words):
 
 def test_synthetic_values_are_valid_and_unassignable():
     es = build_set()
-    assert len(es) == 32
+    assert len(es) == 40  # 32 v1 values + 4 v2 IBANs + 4 v2 fiscal codes
     for e in es:
         assert VALIDATORS[e.type](e.value)
-        if e.type == "fiscal_code":
-            assert e.value[11:15] == "Y999"
-        if e.type == "iban":
-            assert e.value[5:15] == "9999999999"
         if e.type == "pod":
             assert e.value.startswith("IT999E")
+        if e.version == "v1" and e.type == "fiscal_code":
+            assert e.value[11:15] == "Y999"
+        if e.version == "v1" and e.type == "iban":
+            assert e.value[5:15] == "9999999999"
+        if e.version == "v2" and e.type == "fiscal_code":
+            assert 32 <= int(e.value[9:11]) <= 40 and e.value[11:15] in PLACES  # no one is born on day 32-40
+        if e.version == "v2" and e.type == "iban":
+            assert italian_cin(e.value[5:]) != e.value[4]  # mod-97 valid, national check letter wrong
 
 
 def test_checksums_catch_a_single_changed_symbol():
